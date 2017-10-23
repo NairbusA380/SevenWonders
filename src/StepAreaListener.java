@@ -44,7 +44,7 @@ public class StepAreaListener implements MouseListener {
 	public void mouseExited(MouseEvent arg0) {
 		if (help == null){
 			HelpAnimation anim = new HelpAnimation(this, frame, instructions, stepPanel, false);
-			help = new StepAnimationTimer(20, anim);
+			help = new StepAnimationTimer(2, anim);
 			help.start();
 		}else{
 			HelpAnimation anim = (HelpAnimation) help.actionListener;

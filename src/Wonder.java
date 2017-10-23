@@ -7,9 +7,10 @@ import javax.imageio.ImageIO;
 
 public enum Wonder {
 
-	ALEXANDRIEA (Ressource.FIOLE, "AlexandrieA", "alexandria.png", 3, null),
-	ALEXANDRIEB (Ressource.FIOLE, "AlexandrieB", "alexandriab.png", 3, null),
-	HALIKARNASSOSB (Ressource.PAPYRUS, "HalikarnassosB", "Halikarnassos/Halikarnassos.png", 3, null);
+	ALEXANDRIEA (Ressource.FIOLE, "AlexandrieA", "Alexandrie/phare.png", 3, null),
+	ALEXANDRIEB (Ressource.FIOLE, "AlexandrieB", "Alexandrie/phare.png", 3, null),
+	HALIKARNASSOSB (Ressource.TAPIS, "HalikarnassosB", "Halikarnassos/mausolee.png", 3, null),
+	HALIKARNASSOSA (Ressource.TAPIS, "HalikarnassosB", "Halikarnassos/mausolee.png", 2, null);
 	
 	private Ressource ressource;
 	private String name;
@@ -71,7 +72,6 @@ public enum Wonder {
 		for (int i = 0; i < step.length; i++){
 			result += "step "+ i +" : "+ step[i].toString() + "\n";
 		}
-		
 		return result;
 	}	
 }

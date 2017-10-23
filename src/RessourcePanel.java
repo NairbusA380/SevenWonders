@@ -35,5 +35,15 @@ public class RessourcePanel extends JPanel{
 		ClassLoader cl = getClass().getClassLoader();
 		return cl.getResource("Images/"+nom);
 	}
+
+	public BufferedImage getRessourceImage() {
+		return ressourceImage;
+	}
+
+	public void setRessourceImage(BufferedImage ressourceImage) {
+		this.ressourceImage = ressourceImage;
+	}
+	
+	
 	
 }

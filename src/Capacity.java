@@ -1,3 +1,6 @@
-public class Capacity {
-
+public enum Capacity {
+	ECHANGE_BASE_DROITE,
+	ECHANGE_BASE_GAUCHE,
+	ECHANGE_BASE_DROITE_GAUCHE,
+	ECHANGE_ELABORE_DROITE_GAUCHE;
 }

@@ -74,9 +74,17 @@ public class Step {
 	public void setURL(String url) {
 		this.url = url;
 	}
+	
+	public boolean isValidated() {
+		return validated;
+	}
+
+	public void setValidated(boolean validated) {
+		this.validated = validated;
+	}
 
 	public String toString() {
-		String result = "<html>"; //Balise html afin que le label prenne le multi-lignes
+		String result = "<html><p>"; //Balise html afin que le label prenne le multi-lignes
 
 		result += "Cette étape, ";
 
@@ -84,72 +92,122 @@ public class Step {
 		if (!this.validated){
 			result += "d'un coût ";
 			int argile = 0, bois = 0, pierre = 0, minerai = 0, tapis = 0, fiole = 0, papyrus = 0;
-
+			int nbRessource = 0;
+			
 			if (!ressourceCost.isEmpty()){
 				result += "de ";
 				for (Ressource r : ressourceCost){
 					switch (r.toString()){
 					case "ARGILE":
 						argile += 1;
+						nbRessource ++;
 						break;
 					case "BOIS":
 						bois += 1;
+						nbRessource ++;
 						break;
 					case "PIERRE":
 						pierre += 1;
+						nbRessource ++;
 						break;
 					case "MINERAI":
 						minerai += 1;
+						nbRessource ++;
 						break;
 					case "TAPIS":
 						tapis += 1;
+						nbRessource ++;
 						break;
 					case "FIOLE":
 						fiole += 1;
+						nbRessource ++;
 						break;
 					case "PAPYRUS":
 						papyrus += 1;
+						nbRessource ++;
 						break;
 					}
 				}
 				if (argile > 0){
-					result += argile+" argile,";
+					result += argile+" argile";
+					if (argile > 1){
+						result +="s";
+					}
+					nbRessource-=argile;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 				if (bois > 0){
-					result += bois+" bois,";
+					result += bois+" bois";
+					nbRessource-=bois;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 				if (pierre > 0){
-					result += pierre+" pierre,";
+					result += pierre+" pierre";
+					if (pierre > 1){
+						result +="s";
+					}
+					nbRessource-=pierre;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 				if (tapis > 0){
-					result += tapis+" tapis,";
+					result += tapis+" tapis";
+					nbRessource-=tapis;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 				if (fiole > 0){
-					result += fiole+" fiole,";
+					result += fiole+" fiole";
+					if (fiole > 1){
+						result +="s";
+					}
+					nbRessource-=fiole;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 				if (minerai > 0){
-					result += minerai+" minerai,";
+					result += minerai+" minerai";
+					if (minerai > 1){
+						result +="s";
+					}
+					nbRessource-=minerai;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 				if (papyrus > 0){
-					result += papyrus+" papyrus,";
+					result += papyrus+" papyrus";
+					nbRessource-=papyrus;
+					if (nbRessource > 0){
+						result += ", ";
+					}
 				}
 			}
 		}
 
-		result += " vous<br />";
+		result += ", vous ";
 		if (this.validated){
 			result += "permet ";
 		}else{
 			result += "permettra ";
 		}
-		result += "de :<br /><br />";
-		//if (this.points > 0){
-		result +="- Gagner "+this.points+" point";
-		if (this.points > 1){
-			result +="s";
+		result += "de :</p><br />";
+		if (this.points > 0){
+			result +="<p>- Gagner "+this.points+" point";
+			if (this.points > 1){
+				result +="s";
+			}
 		}
-		//}
-		result +="</html>";
+		result +="</p></html>";
+
+		result += "(URL : "+getURL()+")";
 		return result;
 	}
 }

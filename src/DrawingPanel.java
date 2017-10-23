@@ -1,10 +1,13 @@
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.LayoutManager;
 import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 import javax.swing.JPanel;
@@ -12,63 +15,78 @@ import javax.swing.JPanel;
 public class DrawingPanel extends JPanel{
 
 	Frame frame; //Fenetre de jeu
-	Wonder wonder;
+	Player player;
 	BufferedImage wonderImage;
-	Game game;
 	BufferedImage imageFond;
 
-	public DrawingPanel(Frame f, Wonder wonder, Game game){
+	public DrawingPanel(Frame f, Player player){
 		super();
 		this.frame = f;
-		this.wonder = wonder;
+		this.player = player;
 		wonderImage = null;
-		this.game = game;
 		this.imageFond = null;
 	}
 
-	public DrawingPanel(Frame f, Wonder wonder, LayoutManager manager, Game game){
+	public DrawingPanel(Frame f, Player player, LayoutManager manager){
 		super(manager);
 		this.frame = f;
-		this.wonder = wonder;
+		this.player = player;
 		wonderImage = null;
-		this.game = game;
 		this.imageFond = null;
 	}
 
 	public void paintComponent(Graphics g){
-		super.paintComponent(g);
+
+		Wonder wonder = player.getWonder();
 		Graphics2D drawable = (Graphics2D)g;
 
+		if (player.getDoubleBuffer() == null){
+			BufferedImage buffer = new BufferedImage(1237, 576, BufferedImage.TYPE_INT_RGB);
+			Graphics2D drawableBufferedImage = (Graphics2D)buffer.getGraphics();
+
+			/* Dessin de l'image de fond */
+			drawBackgroundImage(drawableBufferedImage, wonder);
+
+			/* Dessin de la ressource */
+
+			drawRessource(drawableBufferedImage, wonder);
+
+			//Dessin de l'information du joueur
+
+			drawableBufferedImage.setColor(Color.CYAN);
+			drawableBufferedImage.drawString(Game.getPlayerTurn().getName(), 1100, 50);
+
+			/* dessin de l'image buffer */
+			player.setDoubleBuffer(buffer);
+		}
+		drawable.drawImage((Image)player.getDoubleBuffer(), 0, 0, null);			
+	}
+
+	private void drawBackgroundImage(Graphics2D drawable, Wonder wonder){
 		if (imageFond == null){
 			if (wonderImage == null){
 				try {
-					wonderImage = ImageIO.read(getWonderImage(this.wonder.getURL()));
+					wonderImage = ImageIO.read(getWonderImage(wonder.getURL()));
 				} catch (IOException e) {
 					System.err.println("L'image de la merveille n'existe pas");
 					e.printStackTrace();
 				}
 			}
-			imageFond = new BufferedImage(frame.getWidth(), frame.getHeight(), BufferedImage.TYPE_INT_ARGB);
-			imageFond.getGraphics().drawImage(wonderImage, 0, 0, this);
+		}
+		drawable.drawImage(wonderImage, 0, 0, this);
 
-			int i = 0;
+	}
 
-			for (FirstAgeCard c : game.firstAgeCards){
-				BufferedImage cardImage = null;
-				if (cardImage == null){
-					try {
-						cardImage = ImageIO.read(getFirstCardImage(c.image));
-					} catch (IOException e) {
-						System.err.println("L'image de la carte n'existe pas");
-						e.printStackTrace();
-					}
-				}
-				imageFond.getGraphics().drawImage(cardImage, 350+100*i, 50+20*i, 150, 232, this);
-				
-				i++;
+	private void drawRessource(Graphics2D drawable, Wonder wonder){
+		if (frame.ressourcePanel.getRessourceImage() == null){
+			String ressource = ""+wonder.getName().substring(0,  wonder.getName().length()-1)+"/Face"+wonder.getName().charAt(wonder.getName().length()-1)+"/Ressource.png";
+			try {
+				frame.ressourcePanel.setRessourceImage(ImageIO.read(getRessourceImage(ressource)));
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
 		}
-		drawable.drawImage(imageFond, 0, 0, this);
+		drawable.drawImage(frame.ressourcePanel.getRessourceImage(), 0, 0, this);
 	}
 
 	private URL getWonderImage(String nom) {
@@ -80,6 +98,12 @@ public class DrawingPanel extends JPanel{
 		ClassLoader cl = getClass().getClassLoader();
 		return cl.getResource("Images/Cartes/Age1/"+nom);
 	}
+
+	private URL getRessourceImage(String nom) {
+		ClassLoader cl = getClass().getClassLoader();
+		return cl.getResource("Images/"+nom);
+	}
+	
 
 	public Frame getFrame() {
 		return frame;

@@ -6,9 +6,10 @@ public class SevenWonders {
 	private static Game game;
 
 	public static void main(String args[]){
-		int nbPlayers = 7;
+		int nbPlayers = 3;
 		game = new Game(nbPlayers);
-		frame = new Frame(game);
+		frame = new Frame();
+		frame.draw();
 	}
 
 	public Frame getFrame() {

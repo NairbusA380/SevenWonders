@@ -27,16 +27,47 @@ public class StepArea extends JPanel{
 			try {
 				stepImage = ImageIO.read(getImage(step.getURL()));
 			} catch (IOException e) {
-				System.err.println(this.step.toString());
 				e.printStackTrace();
 			}
 		}
 		drawable.drawImage(stepImage, 0, 0, this);
+		if (step.isValidated()){
+			BufferedImage check = null;
+			try {
+				check = ImageIO.read(getImage("check.png"));
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			drawable.drawImage(check, 0, 0, this);
+		}else{
+			Step previous = step.previousStep;
+			if (previous != null && !previous.isValidated()){
+				BufferedImage croix = null;
+				try {
+					croix = ImageIO.read(getImage("croix.png"));
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				drawable.drawImage(croix, 0, 0, this);
+			}else{
+				/*RessourceList<Ressource> cost = new RessourceList(step.ressourceCost);
+				if (!Game.getPlayerTurn().canPay(cost)){
+				}*/
+			}
+		}
 	}
 
 	private URL getImage(String nom) {
 		ClassLoader cl = getClass().getClassLoader();
 		return cl.getResource("Images/"+nom);
+	}
+
+	public void setStepImage(BufferedImage stepImage) {
+		this.stepImage = stepImage;
+	}
+	
+	public BufferedImage getStepImage(){
+		return this.stepImage;
 	}
 
 	public Step getStep() {
