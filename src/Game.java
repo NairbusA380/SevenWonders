@@ -6,7 +6,7 @@ import java.util.Random;
 public class Game {
 
 	private static Player[] players;
-	private static Player playerTurn;
+	private static Player playerTurn, playerToShow;
 	private static CardList<Card> firstAgeCards, secondAgeCards, thirdAgeCards;
 	private static CardList<Card> defausse;
 	private static int currentAge;
@@ -27,6 +27,7 @@ public class Game {
 		createFirstAgeCards();
 		addFirstAgeCardsToPoolCards(Game.players);
 		playerTurn = players[0];
+		playerToShow = playerTurn;
 		identifierPlayerTurn = 0;
 		identifierStart = 0;
 		currentAge = 1;
@@ -34,13 +35,13 @@ public class Game {
 
 	private static void createFirstAgeCards() {
 		ArrayList<Card> cardsCreated = new ArrayList<Card>();
-		Card autel = new Card("Autel", (Ressource[])null, "Temple", 2, "autel", "blue");
+		Card autel = new Card("Autel", new Ressource[0], "Temple", 2, "autel", "blue");
 		Card exploitFor = new Card("Exploitation forestière", new Ressource[]{Ressource.PIECE}, Ressource.PIERRE_BOIS, "exploitation_forestière", "brown");
-		Card caserne = new Card("Caserne", new Ressource[]{Ressource.BOIS}, "", (short)1, "caserne", "red");
-		Card comptoirEst = new Card("Comptoir Est", (Ressource[])null, "Forum", Capacity.ECHANGE_BASE_DROITE, "comptoir_est", "yellow");
-		Card presse = new Card("Presse", (Ressource[])null, Ressource.PAPYRUS, "presse", "grey");
-		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", "Tablette", "scriptorium", "green");
-		Card marche = new Card("Marche", (Ressource[])null, "", Capacity.ECHANGE_ELABORE_DROITE_GAUCHE, "marche", "yellow");
+		Card caserne = new Card("Caserne", new Ressource[]{Ressource.MINERAI}, "", (short)1, "caserne", "red");
+		Card comptoirEst = new Card("Comptoir Est", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_DROITE, "comptoir_est", "yellow");
+		Card presse = new Card("Presse", new Ressource[0], Ressource.PAPYRUS, "presse", "grey");
+		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", Scientifique.TABLETTE, "scriptorium", "green");
+		Card marche = new Card("Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche", "yellow");
 		
 		cardsCreated.add(autel);
 		cardsCreated.add(exploitFor);
@@ -80,13 +81,13 @@ public class Game {
 
 	private static void createThirdAgeCards() {
 		ArrayList<Card> cardsCreated = new ArrayList<Card>();
-		Card autel = new Card("Autel", (Ressource[])null, "Temple", 2, "autel", "blue");
+		Card autel = new Card("Autel", new Ressource[0], "Temple", 2, "autel", "blue");
 		Card exploitFor = new Card("Exploitation forestière", new Ressource[]{Ressource.PIECE}, Ressource.PIERRE_BOIS, "exploitation_forestière", "brown");
-		Card caserne = new Card("Caserne", new Ressource[]{Ressource.BOIS}, "", (short)1, "caserne", "red");
-		Card comptoirEst = new Card("Comptoir Est", (Ressource[])null, "Forum", Capacity.ECHANGE_BASE_DROITE, "comptoir_est", "yellow");
-		Card presse = new Card("Presse", (Ressource[])null, Ressource.PIERRE_BOIS, "presse", "grey");
-		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", "Tablette", "scriptorium", "green");
-		Card marche = new Card("Marche", (Ressource[])null, "", Capacity.ECHANGE_ELABORE_DROITE_GAUCHE, "marche", "yellow");
+		Card caserne = new Card("Caserne", new Ressource[]{Ressource.MINERAI}, "", (short)1, "caserne", "red");
+		Card comptoirEst = new Card("Comptoir Est", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_DROITE, "comptoir_est", "yellow");
+		Card presse = new Card("Presse", new Ressource[0], Ressource.PAPYRUS, "presse", "grey");
+		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", Scientifique.TABLETTE, "scriptorium", "green");
+		Card marche = new Card("Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche", "yellow");
 		
 		cardsCreated.add(autel);
 		cardsCreated.add(exploitFor);
@@ -126,13 +127,13 @@ public class Game {
 
 	private static void createSecondAgeCards() {
 		ArrayList<Card> cardsCreated = new ArrayList<Card>();
-		Card autel = new Card("Autel", (Ressource[])null, "Temple", 2, "autel", "blue");
+		Card autel = new Card("Autel", new Ressource[0], "Temple", 2, "autel", "blue");
 		Card exploitFor = new Card("Exploitation forestière", new Ressource[]{Ressource.PIECE}, Ressource.PIERRE_BOIS, "exploitation_forestière", "brown");
-		Card caserne = new Card("Caserne", new Ressource[]{Ressource.BOIS}, "", (short)1, "caserne", "red");
-		Card comptoirEst = new Card("Comptoir Est", (Ressource[])null, "Forum", Capacity.ECHANGE_BASE_DROITE, "comptoir_est", "yellow");
-		Card presse = new Card("Presse", (Ressource[])null, Ressource.PAPYRUS, "presse", "grey");
-		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", "Tablette", "scriptorium", "green");
-		Card marche = new Card("Marche", (Ressource[])null, "", Capacity.ECHANGE_ELABORE_DROITE_GAUCHE, "marche", "yellow");
+		Card caserne = new Card("Caserne", new Ressource[]{Ressource.MINERAI}, "", (short)1, "caserne", "red");
+		Card comptoirEst = new Card("Comptoir Est", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_DROITE, "comptoir_est", "yellow");
+		Card presse = new Card("Presse", new Ressource[0], Ressource.PAPYRUS, "presse", "grey");
+		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", Scientifique.TABLETTE, "scriptorium", "green");
+		Card marche = new Card("Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche", "yellow");
 		
 		cardsCreated.add(autel);
 		cardsCreated.add(exploitFor);
@@ -241,17 +242,17 @@ public class Game {
 				p.setWonder(Wonder.HALIKARNASSOSA);
 			}
 			p.getRessources().add(p.getWonder().getRessource());
-			ArrayList<Ressource> ress = new ArrayList<Ressource>();
+			RessourceList ress = new RessourceList();
 			Step step1, step2, step3 = null;
 			if (i == 0){
 				ress.add(Ressource.PIERRE);
 				ress.add(Ressource.PIERRE);
 				step1 = new Step(1, ress, 3, null, "Alexandrie/FaceA/Step1.png");
-				ress = new ArrayList<Ressource>();
+				ress = new RessourceList();
 				ress.add(Ressource.MINERAI);
 				ress.add(Ressource.MINERAI);
-				step2 = new Step(1, ress, 0, step1, "Alexandrie/FaceA/Step2.png");
-				ress = new ArrayList<Ressource>();
+				step2 = new Step(1, ress, 0, Capacity.CHOISIR_1_MATIERE_PREMIERE, step1, "Alexandrie/FaceA/Step2.png");
+				ress = new RessourceList();
 				ress.add(Ressource.FIOLE);
 				ress.add(Ressource.FIOLE);
 				step3 = new Step(1, ress, 7, step2, "Alexandrie/FaceA/Step3.png");
@@ -267,17 +268,17 @@ public class Game {
 			}else if (i == 1){
 				ress.add(Ressource.MINERAI);
 				ress.add(Ressource.MINERAI);
-				step1 = new Step(1, ress, 2, null, "Halikarnassos/FaceB/Step1.png");
-				ress = new ArrayList<Ressource>();
+				step1 = new Step(1, ress, 2, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, null, "Halikarnassos/FaceB/Step1.png");
+				ress = new RessourceList();
 				ress.add(Ressource.ARGILE);
 				ress.add(Ressource.ARGILE);
 				ress.add(Ressource.ARGILE);
-				step2 = new Step(2, ress, 1, step1, "Halikarnassos/FaceB/Step2.png");
-				ress = new ArrayList<Ressource>();
+				step2 = new Step(2, ress, 1, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step1, "Halikarnassos/FaceB/Step2.png");
+				ress = new RessourceList();
 				ress.add(Ressource.TAPIS);
 				ress.add(Ressource.PAPYRUS);
 				ress.add(Ressource.FIOLE);
-				step3 = new Step(3, ress, 0, step2, "Halikarnassos/FaceB/Step3.png");
+				step3 = new Step(3, ress, 0, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step2, "Halikarnassos/FaceB/Step3.png");
 
 				Step[] steps = new Step[3];
 
@@ -290,7 +291,7 @@ public class Game {
 				ress.add(Ressource.MINERAI);
 				ress.add(Ressource.MINERAI);
 				step1 = new Step(1, ress, 2, null, "Halikarnassos/FaceB/Step1.png");
-				ress = new ArrayList<Ressource>();
+				ress = new RessourceList();
 				ress.add(Ressource.ARGILE);
 				ress.add(Ressource.ARGILE);
 				ress.add(Ressource.ARGILE);
@@ -336,55 +337,13 @@ public class Game {
 		defausse.add(c);
 		player.getDrawedCards().remove(c);
 		for (int i = 0; i < 3; i++){
-			RessourceList<Ressource> ressource = player.getRessources();
+			RessourceList ressource = player.getRessources();
 			ressource.add(Ressource.PIECE);
 			player.setRessources(ressource);
 		}
 	}
 
-	public static boolean acheterRessourcesAGauche(Ressource r){
-		Player current = getPlayerTurn();
-		if(current.getGold()>=2){
-			RessourceList<Ressource> ressources = current.getRessources();
-			ressources.remove(Ressource.PIECE);
-			ressources.remove(Ressource.PIECE);
-			current.setRessources(ressources);
-			RessourceList<Ressource> purchasedRessources = current.getPurchasedRessources();
-			purchasedRessources.add(r);
-			current.setPurchasedRessources(purchasedRessources);
-
-			Player left = getPlayerTurn().getLeftPlayer();
-			RessourceList<Ressource> leftRessources = left.getRessources();
-			leftRessources.add(Ressource.PIECE);
-			leftRessources.add(Ressource.PIECE);
-			left.setRessources(leftRessources);
-			return true;
-		}else{
-			return false;
-		}
-	}
-
-	public static boolean acheterRessourcesADroite(Ressource r){
-		Player current = getPlayerTurn();
-		if(current.getGold()>=2){
-			RessourceList<Ressource> ressources = current.getRessources();
-			ressources.remove(Ressource.PIECE);
-			ressources.remove(Ressource.PIECE);
-			current.setRessources(ressources);
-			RessourceList<Ressource> purchasedRessources = current.getPurchasedRessources();
-			purchasedRessources.add(r);
-			current.setPurchasedRessources(purchasedRessources);
-
-			Player right = getPlayerTurn().getRightPlayer();
-			RessourceList<Ressource> rightRessources = right.getRessources();
-			rightRessources.add(Ressource.PIECE);
-			rightRessources.add(Ressource.PIECE);
-			right.setRessources(rightRessources);
-			return true;
-		}else{
-			return false;
-		}
-	}
+	
 
 	public static void cardChosen(Card card){
 		Player player = getPlayerTurn();
@@ -394,13 +353,13 @@ public class Game {
 		/* Si cout en pieces, il faut les défausser */
 		int nbCoinsNeeded = 0;
 		if (card.getCost() != null){
-			for (int i = 0; i<card.getCost().length; i++){
-				Ressource r = card.getCost()[i];
+			for (Object o : card.getCost()){
+				Ressource r = (Ressource)o;
 				if (r.equals(Ressource.PIECE)){
 					nbCoinsNeeded ++;
 				}
 			}
-			RessourceList<Ressource> available = player.getRessources();
+			RessourceList available = player.getRessources();
 			for (int i = 0; i < nbCoinsNeeded; i++){
 				available.remove(Ressource.PIECE);
 			}
@@ -409,7 +368,7 @@ public class Game {
 
 		/* Si carte marron ou grise, il faut ajouter la ressource */
 		if (card.getGiveRessources() != null){
-			RessourceList<Ressource> available = player.getRessources();
+			RessourceList available = player.getRessources();
 			available.add(card.getGiveRessources());
 			player.setRessources(available);
 		}
@@ -424,6 +383,7 @@ public class Game {
 		if (identifierPlayerTurn == identifierStart){
 			nextTurn(Game.getCurrentAge());
 		}
+		playerToShow = playerTurn;
 	}
 
 	public static void nextTurn(int age){
@@ -457,6 +417,7 @@ public class Game {
 		}
 		Game.setCurrentAge(Game.getCurrentAge()+1);
 		playerTurn = players[0];
+		playerToShow = playerTurn;
 		identifierPlayerTurn = 0;
 	}
 	public static boolean isLastTour() {
@@ -506,12 +467,28 @@ public class Game {
 		return result;
 	}
 
+	public static Player getPlayer(int i) throws Exception {
+		if (i < getNbPlayer()){
+			return players[i];
+		}else{
+			throw new Exception();
+		}
+	}
+	
 	public static Player getPlayerTurn() {
 		return playerTurn;
 	}
-
-	public static Wonder getActiveWonder(){
-		return getPlayerTurn().getWonder();
+	
+	public static Player getPlayerToShow() {
+		return playerToShow;
+	}
+	
+	public static void setPlayerToShow(Player p){
+		playerToShow = p;
+	}
+	
+	public static Wonder getShowingWonder(){
+		return getPlayerToShow().getWonder();
 	}
 
 	public static void setPlayerTurn(Player playerTurn) {

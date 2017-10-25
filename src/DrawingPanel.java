@@ -34,14 +34,13 @@ public class DrawingPanel extends JPanel{
 		wonderImage = null;
 		this.imageFond = null;
 	}
-
+	
 	public void paintComponent(Graphics g){
-
 		Wonder wonder = player.getWonder();
 		Graphics2D drawable = (Graphics2D)g;
 
 		if (player.getDoubleBuffer() == null){
-			BufferedImage buffer = new BufferedImage(1237, 576, BufferedImage.TYPE_INT_RGB);
+			BufferedImage buffer = new BufferedImage((int)(1253*frame.pourcentageX), (int)(615*frame.pourcentageY), BufferedImage.TYPE_INT_RGB);
 			Graphics2D drawableBufferedImage = (Graphics2D)buffer.getGraphics();
 
 			/* Dessin de l'image de fond */
@@ -54,7 +53,7 @@ public class DrawingPanel extends JPanel{
 			//Dessin de l'information du joueur
 
 			drawableBufferedImage.setColor(Color.CYAN);
-			drawableBufferedImage.drawString(Game.getPlayerTurn().getName(), 1100, 50);
+			drawableBufferedImage.drawString(Game.getPlayerToShow().getName(), (int)(1100*frame.pourcentageX), (int)(50*frame.pourcentageY));
 
 			/* dessin de l'image buffer */
 			player.setDoubleBuffer(buffer);
@@ -73,7 +72,7 @@ public class DrawingPanel extends JPanel{
 				}
 			}
 		}
-		drawable.drawImage(wonderImage, 0, 0, this);
+		drawable.drawImage(wonderImage, 0, 0, frame.getWidth(), frame.getHeight(), null);
 
 	}
 
@@ -94,9 +93,13 @@ public class DrawingPanel extends JPanel{
 		return cl.getResource("Images/"+nom);
 	}
 
-	private URL getFirstCardImage(String nom) {
-		ClassLoader cl = getClass().getClassLoader();
-		return cl.getResource("Images/Cartes/Age1/"+nom);
+	public Player getPlayer() {
+		return player;
+	}
+	
+	public void setPlayer(Player p){
+		this.player = p;
+		this.paintComponent(this.getGraphics());
 	}
 
 	private URL getRessourceImage(String nom) {

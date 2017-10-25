@@ -10,7 +10,11 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 public class StepPanel extends JPanel{
+	int nbSteps;
 	
+	public StepPanel(int s){
+		this.nbSteps = s;
+	}
 	public StepPanel(){
 		
 	}

@@ -11,8 +11,8 @@ public class Player {
 	private ArrayList<BattleToken> battleTokens;
 	private ArrayList<Card> playedCards;
 	private Player leftPlayer, rightPlayer;
-	private RessourceList<Ressource> ressources;
-	private RessourceList<Ressource> purchasedRessources;
+	private RessourceList ressources;
+	private RessourceList purchasedRessources;
 	private ArrayList<Card> drawedCards;
 	private BufferedImage doubleBuffer;
 
@@ -21,8 +21,8 @@ public class Player {
 		this.name = name;
 		this.leftPlayer = leftPlayer;
 		this.rightPlayer = rightPlayer;
-		this.ressources = new RessourceList<Ressource>();
-		this.purchasedRessources = new RessourceList<Ressource>();
+		this.ressources = new RessourceList();
+		this.purchasedRessources = new RessourceList();
 		for (int i = 0; i < 3; i++){
 			ressources.add(Ressource.PIECE);
 		}
@@ -33,16 +33,108 @@ public class Player {
 		this.wonder = null;
 	}
 
-
 	public Player(String name) {
 		this(name, null, null);
+	}
+
+	public RessourceList getLeftRessources(){
+		return getLeftPlayer().getRessources();
+	}
+
+	public RessourceList getRightRessources(){
+		return getRightPlayer().getRessources();
+	}
+
+	public boolean acheterRessourcesAGauche(Ressource r){
+		int nbGoldNecessaire = 2;
+		boolean isRessourceElaboree = false;
+		if (r.equals(Ressource.FIOLE) || r.equals(Ressource.TAPIS) || r.equals(Ressource.PAPYRUS)){
+			isRessourceElaboree = true;
+		}
+
+		if (isRessourceElaboree){
+			for (Card c : getPlayedCards()){
+				if (c.getCapacity() != null && c.getCapacity().equals(Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE)){
+					nbGoldNecessaire = 1;
+				}
+			}
+		}else{
+			for (Card c : getPlayedCards()){
+				if (c.getCapacity() != null && (c.getCapacity().equals(Capacity.ECHANGE_MATIERE_PREMIERE_DROITE_GAUCHE) || (c.getCapacity().equals(Capacity.ECHANGE_MATIERE_PREMIERE_GAUCHE)))){
+					nbGoldNecessaire = 1;
+				}
+			}
+		}
+
+		if(getGold()>=nbGoldNecessaire){
+			RessourceList ressources = getRessources();
+			for (int i = 0; i < nbGoldNecessaire; i++){
+				ressources.remove(Ressource.PIECE);
+			}
+			setRessources(ressources);
+			RessourceList purchasedRessources = getPurchasedRessources();
+			purchasedRessources.add(r);
+			setPurchasedRessources(purchasedRessources);
+
+			Player left = getLeftPlayer();
+			RessourceList leftRessources = left.getRessources();
+			for (int i = 0; i < nbGoldNecessaire; i++){
+				ressources.add(Ressource.PIECE);
+			}
+			left.setRessources(leftRessources);
+			return true;
+		}else{
+			return false;
+		}
+	}
+
+	public boolean acheterRessourcesADroite(Ressource r){
+		int nbGoldNecessaire = 2;
+		boolean isRessourceElaboree = false;
+		if (r.equals(Ressource.FIOLE) || r.equals(Ressource.TAPIS) || r.equals(Ressource.PAPYRUS)){
+			isRessourceElaboree = true;
+		}
+
+		if (isRessourceElaboree){
+			for (Card c : getPlayedCards()){
+				if (c.getCapacity() != null && c.getCapacity().equals(Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE)){
+					nbGoldNecessaire = 1;
+				}
+			}
+		}else{
+			for (Card c : getPlayedCards()){
+				if (c.getCapacity() != null && (c.getCapacity().equals(Capacity.ECHANGE_MATIERE_PREMIERE_DROITE_GAUCHE) || (c.getCapacity().equals(Capacity.ECHANGE_MATIERE_PREMIERE_GAUCHE)))){
+					nbGoldNecessaire = 1;
+				}
+			}
+		}
+
+		if(getGold()>=nbGoldNecessaire){
+			RessourceList ressources = getRessources();
+			for (int i = 0; i < nbGoldNecessaire; i++){
+				ressources.remove(Ressource.PIECE);
+			}
+			setRessources(ressources);
+			RessourceList purchasedRessources = getPurchasedRessources();
+			purchasedRessources.add(r);
+			setPurchasedRessources(purchasedRessources);
+
+			Player right = getRightPlayer();
+			RessourceList leftRessources = right.getRessources();
+			for (int i = 0; i < nbGoldNecessaire; i++){
+				ressources.add(Ressource.PIECE);
+			}
+			right.setRessources(leftRessources);
+			return true;
+		}else{
+			return false;
+		}
 	}
 
 
 	public int getGold(){
 		int resultat = 0;
-		for (Object o : ressources){
-			Ressource r = (Ressource) o;
+		for (Ressource r : ressources.ressourceList){
 			if (r.equals(Ressource.PIECE)){
 				resultat++;
 			}
@@ -68,6 +160,76 @@ public class Player {
 		return warPoints;
 	}
 
+	public int countGreenPoints() {
+		int compas = 0, tablette = 0, rouage = 0;
+		for (Card c : playedCards){
+			if (c.getColor() == "green"){
+				switch (c.getItem()){
+				case COMPAS:
+					compas++;
+					break;
+				case TABLETTE:
+					tablette++;
+					break;
+				case ROUAGE:
+					rouage++;
+					break;
+				default:
+					break;
+				}
+			}
+		}
+
+		return (tablette*tablette)+(rouage*rouage)+(compas*compas);
+	}
+
+
+	public int countYellowPoints() {
+		return 0;
+	}
+
+
+	public int countBluePoints() {
+		int bluePoints = 0;
+		for (Card c : getPlayedCards()){
+			if (c.getColor() == "blue"){
+				bluePoints += c.getPoint();
+			}
+		}
+
+		return bluePoints;
+	}
+
+
+	public int countPurplePoints() {
+		return 0;
+	}
+
+
+	public int countStepPoints() {
+		int stepPoints= 0;
+		for (Step s : getWonder().getStep()){
+			if (s.isValidated()){
+				stepPoints += s.points;
+			}else{
+				break;
+			}
+		}
+		return stepPoints;
+	}
+
+
+	public int countCoinPoints() {
+		int coins = 0;
+		for (Ressource o : getRessources().ressourceList){
+			Ressource r = (Ressource)o;
+			if (r.equals(Ressource.PIECE)){
+				coins++;
+			}
+		}
+		return (coins/3);
+	}
+
 	public void validerStep(Card c){
 		this.getDrawedCards().remove(c);
 		int i = 0;
@@ -86,15 +248,16 @@ public class Player {
 			this.setNbPoints(this.getNbPoints()+validateStep.points);
 		}
 		if (validateStep.ressourcesGained != null){
-			RessourceList<Ressource> ressources = this.getRessources();
-			ressources.add(validateStep.ressourcesGained);
+			RessourceList ressources = this.getRessources();
+			ressources.addAll(validateStep.ressourcesGained);
 			this.setRessources(ressources);
 		}
 	}
 
-	public boolean canPay(RessourceList<Ressource> cout){
-		RessourceList<Ressource> availableRessources = this.getRessources();
-		return availableRessources.containsAll(cout);
+	public boolean canPay(RessourceList cout){
+		RessourceList availableRessources = this.getRessources();
+		RessourceList availableRessourcesWithoutUnused = availableRessources.supressAllUnusedRessources(cout);
+		return availableRessourcesWithoutUnused.containsAll(cout);
 	}
 
 	public boolean cardNotAlreadyPlayed(Card card){
@@ -121,23 +284,21 @@ public class Player {
 	}
 
 	public boolean canPlay(Card card){
-		RessourceList<Ressource> cost;
+		RessourceList cost;
 		if (card.getCost()== null){
-			cost = new RessourceList<Ressource>();
+			cost = new RessourceList();
 		}else{
-			List<Ressource> a = Arrays.asList(card.getCost());
-			cost = new RessourceList<Ressource>(new ArrayList<Ressource>(a));
+			cost = card.getCost().clone();
 		}
-		RessourceList<Ressource> availableRessources = this.getRessources();
 
 		return (this.free(card)) || (this.cardNotAlreadyPlayed(card) && this.canPay(cost));
 	}
 
-	public RessourceList<Ressource> getRessources() {
+	public RessourceList getRessources() {
 		return ressources;
 	}
 
-	public void setRessources(RessourceList<Ressource> ressources) {
+	public void setRessources(RessourceList ressources) {
 		this.ressources = ressources;
 	}
 
@@ -157,12 +318,12 @@ public class Player {
 		this.wonder = wonder;
 	}
 
-	public RessourceList<Ressource> getPurchasedRessources() {
+	public RessourceList getPurchasedRessources() {
 		return purchasedRessources;
 	}
 
 
-	public void setPurchasedRessources(RessourceList<Ressource> purchasedRessources) {
+	public void setPurchasedRessources(RessourceList purchasedRessources) {
 		this.purchasedRessources = purchasedRessources;
 	}
 

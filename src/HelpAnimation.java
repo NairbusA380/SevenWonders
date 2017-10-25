@@ -22,24 +22,31 @@ public class HelpAnimation implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		int xI = (int) instructions.getBounds().getWidth();
 		int yI = (int) instructions.getBounds().getHeight();
-		
+
 		Dimension dS = stepPanel.getPreferredSize();
 		int xS = (int) dS.getWidth();
 		int yS = (int) dS.getHeight();
-		
+
 		int xSBound = (int) stepPanel.getBounds().getX();
 		int ySBound = (int) stepPanel.getBounds().getY();
 		int widthS = (int) stepPanel.getBounds().getWidth();
 		int delta = 10;
 
 		if (mouseHover){
+			// On détermine la hauteur max du panel d'instructions
 			yI = Math.min(yI+delta, 115);
+			// On détermine la hauteur max du panel d'étape
 			yS = Math.min(yS+delta, 245);
-			if (yI == 130){
+			// Si on est arrivé au bout de l'animation, on arrete le timer
+			if (yI == 115){
 				listener.stopTimer();
 			}
+			// On détermine la position sur l'axe Y du panel d'étape
 			ySBound = Math.max(ySBound-delta, 302);
+			// On détermine la position du panel d'étape
 			instructions.setBounds(0, 125, xI, yI);
+
+			// On détermine la position finale et la taille du panel d'étape
 			stepPanel.setPreferredSize(new Dimension(xS, yS));
 			stepPanel.setBounds(xSBound, ySBound, widthS, yS);
 		}else{
@@ -48,13 +55,12 @@ public class HelpAnimation implements ActionListener {
 			if (yI == 0){
 				listener.stopTimer();
 			}
-			ySBound = Math.min(ySBound+delta, 425);
+			ySBound = Math.min(ySBound+delta, 457);
 			instructions.setBounds(0, 125, xI, yI);
 			stepPanel.setPreferredSize(new Dimension(xS, yS));
 			stepPanel.setBounds(xSBound, ySBound, widthS, yS);
-			
+
 		}
-		frame.pack();
 		frame.repaint();
 	}
 

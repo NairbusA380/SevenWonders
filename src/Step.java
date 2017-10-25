@@ -4,15 +4,15 @@ import java.util.ArrayList;
 public class Step {
 
 	int position; //Position de l'étape au sein de la merveille
-	ArrayList<Ressource> ressourceCost; // Cout en ressources
+	RessourceList ressourceCost; // Cout en ressources
 	boolean validated; //Indique si l'étape est validée
 	int points; //Nombre de points marqués si validée
 	Capacity capacity; //Capacité spéciale si validée
-	ArrayList<Ressource> ressourcesGained; //Gain de ressources si validée
+	RessourceList ressourcesGained; //Gain de ressources si validée
 	Step previousStep;
 	String url;
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, int points, Capacity capacity, ArrayList<Ressource> ressourcesGained, Step previousStep, String url) {
+	public Step(int position, RessourceList ressourceCost, int points, Capacity capacity, RessourceList ressourcesGained, Step previousStep, String url) {
 		this.position = position;
 		this.ressourceCost = ressourceCost;
 		this.validated = false;
@@ -23,31 +23,31 @@ public class Step {
 		this.url = url;
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, Capacity capacity, ArrayList<Ressource> ressourcesGained, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, Capacity capacity, RessourceList ressourcesGained, Step previousStep, String url){
 		this(position, ressourceCost, 0, capacity, ressourcesGained, previousStep, url);
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, int nbPoints, ArrayList<Ressource> ressourcesGained, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, int nbPoints, RessourceList ressourcesGained, Step previousStep, String url){
 		this(position, ressourceCost, nbPoints, null, ressourcesGained, previousStep, url);
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, int nbPoints, Capacity capacity, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, int nbPoints, Capacity capacity, Step previousStep, String url){
 		this(position, ressourceCost, nbPoints, capacity, null, previousStep, url);
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, ArrayList<Ressource> ressourcesGained, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, RessourceList ressourcesGained, Step previousStep, String url){
 		this(position, ressourceCost, 0, null, ressourcesGained, previousStep, url);
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, int nbPoints, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, int nbPoints, Step previousStep, String url){
 		this(position, ressourceCost, nbPoints, null, null, previousStep, url);
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, Capacity capacity, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, Capacity capacity, Step previousStep, String url){
 		this(position, ressourceCost, 0, capacity, null, previousStep, url);
 	}
 
-	public Step(int position, ArrayList<Ressource> ressourceCost, Step previousStep, String url){
+	public Step(int position, RessourceList ressourceCost, Step previousStep, String url){
 		this(position, ressourceCost, 0, null, null, previousStep, url);
 	}
 
@@ -84,9 +84,10 @@ public class Step {
 	}
 
 	public String toString() {
-		String result = "<html><p>"; //Balise html afin que le label prenne le multi-lignes
-
-		result += "Cette étape, ";
+		String result = "<html>"; //Balise html afin que le label prenne le multi-lignes
+		//result += "Cette étape ";
+		/*result += "Cette étape, ";
+		
 
 		//Annonce du coût de la merveille si elle n'a pas encore été validée
 		if (!this.validated){
@@ -96,7 +97,8 @@ public class Step {
 			
 			if (!ressourceCost.isEmpty()){
 				result += "de ";
-				for (Ressource r : ressourceCost){
+				for (Object o : ressourceCost){
+					Ressource r = (Ressource)o;
 					switch (r.toString()){
 					case "ARGILE":
 						argile += 1;
@@ -192,22 +194,24 @@ public class Step {
 			}
 		}
 
-		result += ", vous ";
-		if (this.validated){
+		result += ", vous ";*/
+		/*if (this.validated){
 			result += "permet ";
 		}else{
 			result += "permettra ";
 		}
-		result += "de :</p><br />";
+		result += "de :<br />";*/
 		if (this.points > 0){
-			result +="<p>- Gagner "+this.points+" point";
+			//result +="- Gagner "+this.points+" point";
+			result += "Gain de "+this.points+" point";
 			if (this.points > 1){
 				result +="s";
 			}
 		}
-		result +="</p></html>";
-
-		result += "(URL : "+getURL()+")";
+		if (this.capacity != null){
+			result += "<br />"+capacity.toString();
+		}
+		result += "</html>";
 		return result;
 	}
 }
