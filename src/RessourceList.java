@@ -30,16 +30,13 @@ public class RessourceList implements Iterable{
 		return available;
 	}
 
-	public boolean add(Ressource e){
-		return ressourceList.add(e);
+	public boolean add(Ressource ressource){
+		return ressourceList.add(ressource);
+		
 	}
 
 	public boolean addAll(RessourceList c){
-		boolean result = true;
-		for (Ressource r : ressourceList){
-			result = result && add(r);
-		}
-		return result;
+		return ressourceList.addAll(c.ressourceList);
 	}
 
 	public boolean remove(Ressource e){
@@ -337,7 +334,7 @@ public class RessourceList implements Iterable{
 	}
 
 	public String toString(){
-		String result = "<html>", resultFin = "";
+		String result = "", resultFin = "";
 		int piece = 0, bois = 0, pierre = 0, minerai = 0, fiole = 0, argile = 0, tapis = 0, papyrus = 0;
 		for (Object o : this){
 			Ressource r = (Ressource) o;
@@ -417,7 +414,7 @@ public class RessourceList implements Iterable{
 			result += papyrus+" papyrus<br />";
 		}
 
-		result += resultFin+"</html>";
+		result += resultFin;
 		return result;
 	}
 }

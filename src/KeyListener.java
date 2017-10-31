@@ -4,10 +4,8 @@ import java.util.ArrayList;
 public class KeyListener implements java.awt.event.KeyListener {
 
 	ArrayList<CardArea> cardArea;
-	Frame frame;
 
-	public KeyListener(Frame frame){
-		this.frame = frame;
+	public KeyListener(){
 		cardArea = new ArrayList<CardArea>();
 	}
 
@@ -18,14 +16,14 @@ public class KeyListener implements java.awt.event.KeyListener {
 				for (CardArea c : cardArea){
 					c.discard = true;
 				}
-				frame.pack();
-				frame.repaint();
+				Frame.frame.pack();
+				Frame.frame.repaint();
 			}else if (arg0.getKeyCode() == KeyEvent.VK_SHIFT){
 				for (CardArea c : cardArea){
 					c.validate = true;
 				}
-				frame.pack();
-				frame.repaint();
+				Frame.frame.pack();
+				Frame.frame.repaint();
 			}
 		}
 
@@ -38,15 +36,15 @@ public class KeyListener implements java.awt.event.KeyListener {
 				c.discard = false;
 				c.repaint();
 			}
-			frame.pack();
-			frame.repaint();
+			Frame.frame.pack();
+			Frame.frame.repaint();
 		}else if (arg0.getKeyCode() == KeyEvent.VK_SHIFT){
 			for (CardArea c : cardArea){
 				c.validate = false;
 				c.repaint();
 			}
-			frame.pack();
-			frame.repaint();
+			Frame.frame.pack();
+			Frame.frame.repaint();
 		}
 	}
 

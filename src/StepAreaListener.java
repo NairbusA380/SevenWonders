@@ -15,14 +15,12 @@ public class StepAreaListener implements MouseListener {
 
 	StepArea step;
 	StepInstructionLabel instructions;
-	Frame frame;
 	StepAnimationTimer help;
 	StepPanel stepPanel;
 
-	public StepAreaListener(StepArea step, StepInstructionLabel instructions, StepPanel stepPanel, Frame frame) {
+	public StepAreaListener(StepArea step, StepInstructionLabel instructions, StepPanel stepPanel) {
 		this.step = step;
 		this.instructions = instructions;
-		this.frame = frame;
 		this.stepPanel = stepPanel;
 	}
 
@@ -32,7 +30,7 @@ public class StepAreaListener implements MouseListener {
 
 	public void mouseEntered(MouseEvent arg0) {
 		if (help == null){
-			HelpAnimation anim = new HelpAnimation(this, frame, instructions, stepPanel, true);
+			HelpAnimation anim = new HelpAnimation(this, instructions, stepPanel, true);
 			help = new StepAnimationTimer(20, anim);
 			help.start();
 		}else{
@@ -43,7 +41,7 @@ public class StepAreaListener implements MouseListener {
 
 	public void mouseExited(MouseEvent arg0) {
 		if (help == null){
-			HelpAnimation anim = new HelpAnimation(this, frame, instructions, stepPanel, false);
+			HelpAnimation anim = new HelpAnimation(this, instructions, stepPanel, false);
 			help = new StepAnimationTimer(2, anim);
 			help.start();
 		}else{

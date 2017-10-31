@@ -42,7 +42,7 @@ public class Game {
 		Card presse = new Card("Presse", new Ressource[0], Ressource.PAPYRUS, "presse", "grey");
 		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", Scientifique.TABLETTE, "scriptorium", "green");
 		Card marche = new Card("Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche", "yellow");
-		
+
 		cardsCreated.add(autel);
 		cardsCreated.add(exploitFor);
 		cardsCreated.add(caserne);
@@ -50,6 +50,14 @@ public class Game {
 		cardsCreated.add(presse);
 		cardsCreated.add(scriptorium);
 		cardsCreated.add(marche);
+
+		cardsCreated.add(autel.cloneCard());
+		cardsCreated.add(exploitFor.cloneCard());
+		cardsCreated.add(caserne.cloneCard());
+		cardsCreated.add(comptoirEst.cloneCard());
+		cardsCreated.add(presse.cloneCard());
+		cardsCreated.add(scriptorium.cloneCard());
+		cardsCreated.add(marche.cloneCard());
 
 		cardsCreated.add(autel.cloneCard());
 		cardsCreated.add(exploitFor.cloneCard());
@@ -88,7 +96,7 @@ public class Game {
 		Card presse = new Card("Presse", new Ressource[0], Ressource.PAPYRUS, "presse", "grey");
 		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", Scientifique.TABLETTE, "scriptorium", "green");
 		Card marche = new Card("Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche", "yellow");
-		
+
 		cardsCreated.add(autel);
 		cardsCreated.add(exploitFor);
 		cardsCreated.add(caserne);
@@ -134,7 +142,7 @@ public class Game {
 		Card presse = new Card("Presse", new Ressource[0], Ressource.PAPYRUS, "presse", "grey");
 		Card scriptorium = new Card("Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "", Scientifique.TABLETTE, "scriptorium", "green");
 		Card marche = new Card("Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche", "yellow");
-		
+
 		cardsCreated.add(autel);
 		cardsCreated.add(exploitFor);
 		cardsCreated.add(caserne);
@@ -343,9 +351,9 @@ public class Game {
 		}
 	}
 
-	
 
-	public static void cardChosen(Card card){
+
+	public static int cardChosen(Card card){
 		Player player = getPlayerTurn();
 		/* On vérifie encore si on peut la jouer */
 		//if (Game.canPlay(player, card)){
@@ -372,11 +380,21 @@ public class Game {
 			available.add(card.getGiveRessources());
 			player.setRessources(available);
 		}
+		
+		/* Si carte verte, ajouter l'item */
+		
+		if (card.getItem() != null){
+			ArrayList<Scientifique> available = player.getScientifique();
+			available.add(card.getItem());
+			player.setScientifique(available);
+		}
 
 		player.getPlayedCards().add(card);
 		player.getDrawedCards().remove(card);
+
+		return nbCoinsNeeded;
 	}
-	
+
 	public static void nextPlayer(){
 		identifierPlayerTurn = (identifierPlayerTurn+1)%players.length;
 		playerTurn = players[identifierPlayerTurn];
@@ -384,6 +402,7 @@ public class Game {
 			nextTurn(Game.getCurrentAge());
 		}
 		playerToShow = playerTurn;
+		playerTurn.setPurchasedRessources(new RessourceList());
 	}
 
 	public static void nextTurn(int age){
@@ -399,6 +418,16 @@ public class Game {
 				players[i].setDrawedCards(players[i+1].getDrawedCards());
 			}
 			players[players.length-1].setDrawedCards(playerDrawedCards);
+		}
+		for (Player p : players){
+			int goldEarned = p.getNbGoldEarnedThisTurn();
+			if (goldEarned > 0){
+				for (int i = 0; i < goldEarned; i++){
+					RessourceList ressources = p.getRessources();
+					ressources.add(Ressource.PIECE);
+					p.setRessources(ressources);
+				}
+			}
 		}
 	}
 
@@ -430,7 +459,7 @@ public class Game {
 		}
 		return lastTour;
 	}
-	
+
 	public static void compterCombat(int age){
 		for (Player p : Game.players){
 			Player gauche = p.getLeftPlayer();
@@ -474,19 +503,19 @@ public class Game {
 			throw new Exception();
 		}
 	}
-	
+
 	public static Player getPlayerTurn() {
 		return playerTurn;
 	}
-	
+
 	public static Player getPlayerToShow() {
 		return playerToShow;
 	}
-	
+
 	public static void setPlayerToShow(Player p){
 		playerToShow = p;
 	}
-	
+
 	public static Wonder getShowingWonder(){
 		return getPlayerToShow().getWonder();
 	}

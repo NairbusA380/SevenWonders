@@ -5,20 +5,18 @@ import java.awt.event.MouseListener;
 public class ArrowListener implements MouseListener {
 
 	ArrowButton arrowButton;
-	Frame frame;
 
-	public ArrowListener (ArrowButton arrowButton, Frame frame){
+	public ArrowListener (ArrowButton arrowButton){
 		this.arrowButton = arrowButton;
-		this.frame = frame;
 	}
 
 	public void mouseClicked(MouseEvent arg0) {
 		if (arrowButton.isLeft){
 			Game.setPlayerToShow(Game.getPlayerToShow().getLeftPlayer());
-			arrowButton.frame.draw();
+			Frame.entireDraw();
 		}else{
 			Game.setPlayerToShow(Game.getPlayerToShow().getRightPlayer());
-			arrowButton.frame.draw();
+			Frame.entireDraw();
 		}
 	}
 

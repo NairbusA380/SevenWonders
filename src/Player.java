@@ -3,18 +3,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 public class Player {
 
 	private String name;
 	private Wonder wonder;
 	private int nbPoints;
 	private ArrayList<BattleToken> battleTokens;
+	private ArrayList<Scientifique> scientifique = new ArrayList<Scientifique>();
 	private ArrayList<Card> playedCards;
 	private Player leftPlayer, rightPlayer;
 	private RessourceList ressources;
 	private RessourceList purchasedRessources;
 	private ArrayList<Card> drawedCards;
 	private BufferedImage doubleBuffer;
+	private int nbGoldEarnedThisTurn = 0;
+	private ArrayList<Ressource> purchasedLeftRessources, purchasedRightRessources;
 
 	public Player(String name, Player leftPlayer, Player rightPlayer) {
 		this.doubleBuffer = null;
@@ -22,15 +27,17 @@ public class Player {
 		this.leftPlayer = leftPlayer;
 		this.rightPlayer = rightPlayer;
 		this.ressources = new RessourceList();
-		this.purchasedRessources = new RessourceList();
 		for (int i = 0; i < 3; i++){
 			ressources.add(Ressource.PIECE);
 		}
+		this.purchasedRessources = new RessourceList();
 		this.nbPoints = 0;
 		this.battleTokens = new ArrayList<BattleToken>();
 		this.playedCards = new ArrayList<Card>();
 		this.drawedCards = new ArrayList<Card>();
 		this.wonder = null;
+		this.purchasedLeftRessources = new ArrayList<Ressource>();
+		this.purchasedRightRessources = new ArrayList<Ressource>();
 	}
 
 	public Player(String name) {
@@ -45,13 +52,35 @@ public class Player {
 		return getRightPlayer().getRessources();
 	}
 
-	public boolean acheterRessourcesAGauche(Ressource r){
+	public int getPlace(){
+		int place = 0;
+		for (int i = 0; i < Game.getNbPlayer(); i++){
+			try {
+				if (this.getName().equals(Game.getPlayer(i).getName())){
+					place = i;
+					break;
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return place;
+	}
+
+	public int acheterRessourcesAGauche(Ressource r){
 		int nbGoldNecessaire = 2;
 		boolean isRessourceElaboree = false;
+		if (!r.isRessourceSimple()){
+			Frame.choixUtilisateur = new JOptionPane();
+			String[] choix = r.toString().split("_");
+			
+			int retour = Frame.choixUtilisateur.showOptionDialog(null, "Choisissez la ressource parmi celles disponibles", "Choix de ressource", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, choix, choix[0]);
+			r = Ressource.toRessource(choix[retour]);
+		}
 		if (r.equals(Ressource.FIOLE) || r.equals(Ressource.TAPIS) || r.equals(Ressource.PAPYRUS)){
+
 			isRessourceElaboree = true;
 		}
-
 		if (isRessourceElaboree){
 			for (Card c : getPlayedCards()){
 				if (c.getCapacity() != null && c.getCapacity().equals(Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE)){
@@ -65,8 +94,8 @@ public class Player {
 				}
 			}
 		}
-
 		if(getGold()>=nbGoldNecessaire){
+			System.out.println();
 			RessourceList ressources = getRessources();
 			for (int i = 0; i < nbGoldNecessaire; i++){
 				ressources.remove(Ressource.PIECE);
@@ -77,18 +106,14 @@ public class Player {
 			setPurchasedRessources(purchasedRessources);
 
 			Player left = getLeftPlayer();
-			RessourceList leftRessources = left.getRessources();
-			for (int i = 0; i < nbGoldNecessaire; i++){
-				ressources.add(Ressource.PIECE);
-			}
-			left.setRessources(leftRessources);
-			return true;
+			left.nbGoldEarnedThisTurn = nbGoldNecessaire;
+			return nbGoldNecessaire;
 		}else{
-			return false;
+			return -1;
 		}
 	}
 
-	public boolean acheterRessourcesADroite(Ressource r){
+	public int acheterRessourcesADroite(Ressource r){
 		int nbGoldNecessaire = 2;
 		boolean isRessourceElaboree = false;
 		if (r.equals(Ressource.FIOLE) || r.equals(Ressource.TAPIS) || r.equals(Ressource.PAPYRUS)){
@@ -120,17 +145,21 @@ public class Player {
 			setPurchasedRessources(purchasedRessources);
 
 			Player right = getRightPlayer();
-			RessourceList leftRessources = right.getRessources();
-			for (int i = 0; i < nbGoldNecessaire; i++){
-				ressources.add(Ressource.PIECE);
-			}
-			right.setRessources(leftRessources);
-			return true;
+			right.nbGoldEarnedThisTurn = nbGoldNecessaire;
+			return nbGoldNecessaire;
 		}else{
-			return false;
+			return -1;
 		}
 	}
 
+
+	public int getNbGoldEarnedThisTurn() {
+		return nbGoldEarnedThisTurn;
+	}
+
+	public void setNbGoldEarnedThisTurn(int nbGoldEarnedThisTurn) {
+		this.nbGoldEarnedThisTurn = nbGoldEarnedThisTurn;
+	}
 
 	public int getGold(){
 		int resultat = 0;
@@ -171,7 +200,7 @@ public class Player {
 				case TABLETTE:
 					tablette++;
 					break;
-				case ROUAGE:
+				case ROUE:
 					rouage++;
 					break;
 				default:
@@ -255,7 +284,8 @@ public class Player {
 	}
 
 	public boolean canPay(RessourceList cout){
-		RessourceList availableRessources = this.getRessources();
+		RessourceList availableRessources = this.getRessources().clone();
+		availableRessources.addAll(this.getPurchasedRessources());
 		RessourceList availableRessourcesWithoutUnused = availableRessources.supressAllUnusedRessources(cout);
 		return availableRessourcesWithoutUnused.containsAll(cout);
 	}
@@ -283,7 +313,7 @@ public class Player {
 		return result;
 	}
 
-	public boolean canPlay(Card card){
+	public boolean canPay(Card card){
 		RessourceList cost;
 		if (card.getCost()== null){
 			cost = new RessourceList();
@@ -291,7 +321,7 @@ public class Player {
 			cost = card.getCost().clone();
 		}
 
-		return (this.free(card)) || (this.cardNotAlreadyPlayed(card) && this.canPay(cost));
+		return this.free(card) || this.canPay(cost);
 	}
 
 	public RessourceList getRessources() {
@@ -385,11 +415,32 @@ public class Player {
 		this.doubleBuffer = doubleBuffer;
 	}
 
+	public ArrayList<Scientifique> getScientifique() {
+		return scientifique;
+	}
+
+	public void setScientifique(ArrayList<Scientifique> scientifique) {
+		this.scientifique = scientifique;
+	}
 
 	@Override
 	public String toString() {
 		return "Player : \nname=" + name + "\nwonder=" + wonder.toString() + "\n nbPoints=" + nbPoints + ", leftPlayer=" + leftPlayer.name + "\n rightPlayer=" + rightPlayer.name;
 	}
 
+	public ArrayList<Ressource> getPurchasedLeftRessources() {
+		return purchasedLeftRessources;
+	}
 
+	public void setPurchasedLeftRessources(ArrayList<Ressource> purchasedLeftRessources) {
+		this.purchasedLeftRessources = purchasedLeftRessources;
+	}
+
+	public ArrayList<Ressource> getPurchasedRightRessources() {
+		return purchasedRightRessources;
+	}
+
+	public void setPurchasedRightRessources(ArrayList<Ressource> purchasedRightRessources) {
+		this.purchasedRightRessources = purchasedRightRessources;
+	}
 }

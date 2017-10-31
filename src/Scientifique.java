@@ -1,5 +1,5 @@
 public enum Scientifique {
 	COMPAS,
-	ROUAGE,
+	ROUE,
 	TABLETTE;	
 }

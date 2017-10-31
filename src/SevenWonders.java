@@ -6,10 +6,10 @@ public class SevenWonders {
 	private static Game game;
 
 	public static void main(String args[]){
-		int nbPlayers = 3;
+		int nbPlayers = 4;
 		game = new Game(nbPlayers);
 		frame = new Frame();
-		frame.draw();
+		frame.entireDraw();
 	}
 
 	public Frame getFrame() {

@@ -30,16 +30,16 @@ public enum Capacity {
 		String result = "";
 		switch(this){
 		case ECHANGE_MATIERE_PREMIERE_DROITE:
-			result = "Achat d'une ressource de base du joueur de droite à 1 pièce";
+			result = "Achat d'une matière première du joueur de droite à 1 pièce";
 			break;
 		case ECHANGE_MATIERE_PREMIERE_GAUCHE:
-			result = "Achat d'une ressource de base du joueur de gauche à 1 pièce";
+			result = "Achat d'une matière première du joueur de gauche à 1 pièce";
 			break;
 		case ECHANGE_MATIERE_PREMIERE_DROITE_GAUCHE:
-			result = "Achat d'une ressource de base du joueur de gauche ou de droite à 1 pièce";
+			result = "Achat d'une matière première d'un de vos voisins à 1 pièce";
 			break;
 		case ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE:
-			result = "Achat d'une ressource élaborée du joueur de gauche ou de droite à 1 pièce";
+			result = "Achat d'un produit manufacturé d'un de vos voisins à 1 pièce";
 			break;
 		case CONSTRUCTION_GRATUITE_1_PAR_AGE:
 			result = "Construction gratuite d'un batiment par âge";

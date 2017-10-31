@@ -15,16 +15,17 @@ public class CardArea extends JPanel{
 	private Card card;
 	BufferedImage cardImage;
 	private String url;
-	boolean enabled;
 	boolean discard;
 	boolean validate;
 	boolean big;
+	private boolean enabled;
+	final int miniWidth = 65, miniHeight = 100;
+	final int bigWidth = 194, bigHeight = 300;
 
 	public CardArea (Card card, boolean big){
 		this.card = card;
 		this.url = card.getImage();
 		cardImage = null;
-		this.enabled = true;
 		this.discard = false;
 		this.validate = false;
 		this.big = big;
@@ -34,17 +35,9 @@ public class CardArea extends JPanel{
 		this.url = card.getImage();
 		this.card = card;
 		cardImage = null;
-		this.enabled = enabled;
 		this.discard = false;
 		this.validate = false;
 		this.big = big;
-	}
-
-	public boolean isEnabled() {
-		return enabled;
-	}
-
-	public void setEnabled(boolean enabled) {
 		this.enabled = enabled;
 	}
 
@@ -54,9 +47,7 @@ public class CardArea extends JPanel{
 		if (cardImage == null){
 			try {
 				String completeUrl = url;
-				if (big){
-					completeUrl += "Big";
-				}else{
+				if (!big){
 					completeUrl += "Mini";
 				}
 				completeUrl += ".png";
@@ -70,39 +61,35 @@ public class CardArea extends JPanel{
 
 		drawable.drawImage(cardImage, 0, 0, this);
 
-		if (!card.haveBeenPlayed){
-			if (discard || validate){
-				if (discard){
-					drawable.setColor(new Color(0, 0, 0, 155));
-					drawable.fillRoundRect(0, 0, cardImage.getWidth(), cardImage.getHeight(), 25, 25);
-					drawable.setColor(new Color(255, 255, 255));
-					drawable.drawString("DISCARD",this.getWidth()/2-20, this.getHeight()/2-2);
-				}else if (validate){
-					drawable.setColor(new Color(0, 100, 0, 120));
-					drawable.fillRoundRect(0, 0, cardImage.getWidth(), cardImage.getHeight(), 25, 25);
-					drawable.setColor(new Color(255, 255, 255));
-					drawable.drawString("VALIDATE A STEP",this.getWidth()/2-40, this.getHeight()/2-2);
-				}
-			}else{
-				if (!enabled){
-					BufferedImage croix = null;
-					if (big){
-						try {
-							croix = ImageIO.read(getImage("croixBig.png"));
-						} catch (IOException e) {
-							System.err.println(this.card.toString());
-							e.printStackTrace();
-						}
-						drawable.drawImage(croix, 0, 0, this);
-					}else{
-						try {
-							croix = ImageIO.read(getImage("croixMini.png"));
-						} catch (IOException e) {
-							System.err.println(this.card.toString());
-							e.printStackTrace();
-						}
-						drawable.drawImage(croix, 0, 0, this);
+		if (!Game.getPlayerToShow().cardNotAlreadyPlayed(card) || !Game.getPlayerToShow().canPay(card)){
+
+			if (enabled){
+				if (discard || validate){
+					if (discard){
+						drawable.setColor(new Color(0, 0, 0, 155));
+						drawable.fillRoundRect(0, 0, cardImage.getWidth(), cardImage.getHeight(), 25, 25);
+						drawable.setColor(new Color(255, 255, 255));
+						drawable.drawString("DISCARD",this.getWidth()/2-20, this.getHeight()/2-2);
+					}else if (validate){
+						drawable.setColor(new Color(0, 100, 0, 120));
+						drawable.fillRoundRect(0, 0, cardImage.getWidth(), cardImage.getHeight(), 25, 25);
+						drawable.setColor(new Color(255, 255, 255));
+						drawable.drawString("VALIDATE A STEP",this.getWidth()/2-40, this.getHeight()/2-2);
 					}
+				}else{
+					BufferedImage croix = null;
+					String url = "croix";
+					if (!big){
+						url +="Mini";
+					}
+					url += ".png";
+					try {
+						croix = ImageIO.read(getImage(url));
+					} catch (IOException e) {
+						System.err.println(this.card.toString());
+						e.printStackTrace();
+					}
+					drawable.drawImage(croix, 0, 0, this);
 				}
 			}
 		}
@@ -128,6 +115,22 @@ public class CardArea extends JPanel{
 
 	public String getURL(){
 		return this.url;
+	}
+
+	public int getMiniWidth() {
+		return miniWidth;
+	}
+
+	public int getMiniHeight() {
+		return miniHeight;
+	}
+
+	public int getBigWidth() {
+		return bigWidth;
+	}
+
+	public int getBigHeight() {
+		return bigHeight;
 	}
 
 }

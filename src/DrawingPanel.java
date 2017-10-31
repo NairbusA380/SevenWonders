@@ -14,22 +14,19 @@ import javax.swing.JPanel;
 
 public class DrawingPanel extends JPanel{
 
-	Frame frame; //Fenetre de jeu
 	Player player;
 	BufferedImage wonderImage;
 	BufferedImage imageFond;
 
-	public DrawingPanel(Frame f, Player player){
+	public DrawingPanel(Player player){
 		super();
-		this.frame = f;
 		this.player = player;
 		wonderImage = null;
 		this.imageFond = null;
 	}
 
-	public DrawingPanel(Frame f, Player player, LayoutManager manager){
+	public DrawingPanel(Player player, LayoutManager manager){
 		super(manager);
-		this.frame = f;
 		this.player = player;
 		wonderImage = null;
 		this.imageFond = null;
@@ -40,20 +37,16 @@ public class DrawingPanel extends JPanel{
 		Graphics2D drawable = (Graphics2D)g;
 
 		if (player.getDoubleBuffer() == null){
-			BufferedImage buffer = new BufferedImage((int)(1253*frame.pourcentageX), (int)(615*frame.pourcentageY), BufferedImage.TYPE_INT_RGB);
+			BufferedImage buffer = new BufferedImage((int)(1253*Frame.pourcentageX), (int)(615*Frame.pourcentageY), BufferedImage.TYPE_INT_RGB);
 			Graphics2D drawableBufferedImage = (Graphics2D)buffer.getGraphics();
 
 			/* Dessin de l'image de fond */
 			drawBackgroundImage(drawableBufferedImage, wonder);
 
-			/* Dessin de la ressource */
-
-			drawRessource(drawableBufferedImage, wonder);
-
 			//Dessin de l'information du joueur
 
 			drawableBufferedImage.setColor(Color.CYAN);
-			drawableBufferedImage.drawString(Game.getPlayerToShow().getName(), (int)(1100*frame.pourcentageX), (int)(50*frame.pourcentageY));
+			drawableBufferedImage.drawString(Game.getPlayerToShow().getName(), (int)(1100*Frame.pourcentageX), (int)(50*Frame.pourcentageY));
 
 			/* dessin de l'image buffer */
 			player.setDoubleBuffer(buffer);
@@ -72,20 +65,8 @@ public class DrawingPanel extends JPanel{
 				}
 			}
 		}
-		drawable.drawImage(wonderImage, 0, 0, frame.getWidth(), frame.getHeight(), null);
+		drawable.drawImage(wonderImage, 0, 0, Frame.frame.getWidth(), Frame.frame.getHeight(), null);
 
-	}
-
-	private void drawRessource(Graphics2D drawable, Wonder wonder){
-		if (frame.ressourcePanel.getRessourceImage() == null){
-			String ressource = ""+wonder.getName().substring(0,  wonder.getName().length()-1)+"/Face"+wonder.getName().charAt(wonder.getName().length()-1)+"/Ressource.png";
-			try {
-				frame.ressourcePanel.setRessourceImage(ImageIO.read(getRessourceImage(ressource)));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		drawable.drawImage(frame.ressourcePanel.getRessourceImage(), 0, 0, this);
 	}
 
 	private URL getWonderImage(String nom) {
@@ -100,19 +81,5 @@ public class DrawingPanel extends JPanel{
 	public void setPlayer(Player p){
 		this.player = p;
 		this.paintComponent(this.getGraphics());
-	}
-
-	private URL getRessourceImage(String nom) {
-		ClassLoader cl = getClass().getClassLoader();
-		return cl.getResource("Images/"+nom);
-	}
-	
-
-	public Frame getFrame() {
-		return frame;
-	}
-
-	public void setFrame(Frame frame) {
-		this.frame = frame;
 	}
 }

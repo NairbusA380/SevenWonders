@@ -9,12 +9,6 @@ import javax.swing.JPanel;
 
 public class FinPartiePanel extends JPanel {
 
-	Frame frame;
-
-	public FinPartiePanel(Frame frame){
-		this.frame = frame;
-	}
-
 	public void paintComponent(Graphics g) {
 		Graphics2D drawable = (Graphics2D)g;
 		BufferedImage finImage = null;
@@ -25,7 +19,7 @@ public class FinPartiePanel extends JPanel {
 				e.printStackTrace();
 			}
 		}
-		drawable.drawImage(finImage, 0, 0, frame.getWidth()-16, frame.getHeight()-39, null);
+		drawable.drawImage(finImage, 0, 0, Frame.frame.getWidth()-16, Frame.frame.getHeight()-39, null);
 
 		for (int i = 0; i < Game.getNbPlayer(); i++){
 			Player p = null;
@@ -36,10 +30,10 @@ public class FinPartiePanel extends JPanel {
 				e1.printStackTrace();
 			}
 			
-			int x = (int)((235+144*i)*frame.pourcentageX);
-			int yBase = (int)(57*frame.pourcentageY);
-			int increment = (int)(59*frame.pourcentageY);
-			int centrage = (int)(20*frame.pourcentageX);
+			int x = (int)((235+144*i)*Frame.pourcentageX);
+			int yBase = (int)(57*Frame.pourcentageY);
+			int increment = (int)(59*Frame.pourcentageY);
+			int centrage = (int)(20*Frame.pourcentageX);
 			drawable.drawString(p.getName(), x, yBase);
 			drawable.drawString(""+p.countWarPoints(), x+centrage, yBase+increment);
 			drawable.drawString(""+p.getGold()/3, x+centrage, yBase+increment*2);
@@ -48,7 +42,7 @@ public class FinPartiePanel extends JPanel {
 			drawable.drawString(""+p.countYellowPoints(), x+centrage, yBase+increment*5);
 			drawable.drawString(""+p.countPurplePoints(), x+centrage, yBase+increment*6);
 			drawable.drawString(""+p.countGreenPoints(), x+centrage, yBase+increment*7);
-			int total = p.countWarPoints()+p.getGold()+p.countStepPoints()+p.countBluePoints()+p.countYellowPoints()+p.countPurplePoints()+p.countGreenPoints();
+			int total = p.countWarPoints()+p.getGold()/3+p.countStepPoints()+p.countBluePoints()+p.countYellowPoints()+p.countPurplePoints()+p.countGreenPoints();
 			drawable.drawString(""+total, x+centrage, yBase+increment*8);
 		}
 	}

@@ -12,16 +12,14 @@ public class ArrowButton extends JButton {
 
 	boolean isLeft;
 	boolean isHover;
-	Frame frame;
 	
-	public ArrowButton(boolean isLeft, Frame frame){
+	public ArrowButton(boolean isLeft){
 		super();
 		this.isLeft = isLeft;
 		this.isHover = false;
-		this.frame = frame;
 		setBorderPainted(false);
 		setContentAreaFilled(false);
-		addMouseListener(new ArrowListener(this, frame));
+		addMouseListener(new ArrowListener(this));
 	}
 	
 	public void paintComponent(Graphics g){
