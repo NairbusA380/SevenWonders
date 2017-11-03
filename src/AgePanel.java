@@ -20,7 +20,7 @@ public class AgePanel extends JPanel {
 		super.paintComponent(g);
 		Graphics2D drawable = (Graphics2D)g;
 		try {
-			ageImage = ImageIO.read(getAgeImage("age"+age+".png"));
+			ageImage = ImageIO.read(getAgeImage("age"+1+".png"));
 		} catch (IOException e) {
 			System.err.println("eee");
 		}

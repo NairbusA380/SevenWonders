@@ -8,6 +8,9 @@ import java.awt.GridLayout;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -53,14 +56,14 @@ public class Frame extends JFrame{
 
 	//public void draw(){
 	public static void entireDraw(){
-//		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getLeftPlayer().getPlace()]){
-//			System.out.println("Je peux acheter la ressource "+rp.ressource+" à gauche ? "+!rp.hasBeenPurchased[Game.getPlayerTurn().getPlace()]);
-//		}
-//		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getRightPlayer().getPlace()]){
-//			System.out.println("Je peux acheter la ressource "+rp.ressource+" à droite ? "+!rp.hasBeenPurchased[Game.getPlayerTurn().getPlace()]);
-//		}
-		
-		
+		//		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getLeftPlayer().getPlace()]){
+		//			System.out.println("Je peux acheter la ressource "+rp.ressource+" à gauche ? "+!rp.hasBeenPurchased[Game.getPlayerTurn().getPlace()]);
+		//		}
+		//		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getRightPlayer().getPlace()]){
+		//			System.out.println("Je peux acheter la ressource "+rp.ressource+" à droite ? "+!rp.hasBeenPurchased[Game.getPlayerTurn().getPlace()]);
+		//		}
+
+
 		if (keyListener == null){
 			keyListener = new KeyListener();
 			frame.addKeyListener(keyListener);
@@ -82,9 +85,11 @@ public class Frame extends JFrame{
 			RessourcePanel ressourcePanel = null;
 			if (panelsRessources.size() > i){
 				ressourcePanel = panelsRessources.get(i);
+				SevenWonders.getLogger().log(Level.INFO, "Récupération du panel de ressource contenant la ressource "+ressource.toString()+" pour le joueur \""+playerToShow.getName()+"\"");
 			}else{
 				ressourcePanel = new RessourcePanel(activeWonder, ressource);
 				ressourcePanels[playerToShow.getPlace()].add(ressourcePanel);
+				SevenWonders.getLogger().log(Level.INFO, "Création du panel de ressource contenant la ressource "+ressource.toString()+" pour le joueur \""+playerToShow.getName()+"\"");
 			}
 
 			if ((playerToShow.equals(Game.getPlayerTurn().getLeftPlayer()) || (playerToShow.equals(Game.getPlayerTurn().getRightPlayer()))) && !ressource.equals(Ressource.PIECE)){
@@ -93,7 +98,6 @@ public class Frame extends JFrame{
 		}
 		ArrayList<RessourcePanel> purchasedPanels = new ArrayList<RessourcePanel>();
 		if (playerToShow.equals(Game.getPlayerTurn())){
-			System.out.println("Ajout des ressources achetées");
 			int i = playerToShow.getRessources().size();
 			for (Object o : playerToShow.getPurchasedRessources()){
 				Ressource ressource = (Ressource)o;
@@ -110,7 +114,7 @@ public class Frame extends JFrame{
 		int i = 0;
 		for (Scientifique s : playerToShow.getScientifique()){
 			ScientifiquePanel scientifiquePanel = new ScientifiquePanel(s);
-			scientifiquePanel.setBounds(815+60*i, 10, 56, 55);
+			scientifiquePanel.setBounds(885+60*i, 10, 56, 55);
 			scientifiquePanel.setOpaque(false);
 			scientifiquePanels.add(scientifiquePanel);
 			container.add(scientifiquePanel);
@@ -160,13 +164,14 @@ public class Frame extends JFrame{
 		frame.repaint();
 	}
 
-	public static void cardChosen(CardArea cardArea, int gold){
-		container.remove(cardArea);
-		cardAreas.remove(cardArea);
+	public static void playCard(Player p, int gold){
+		if (gold > 0){
+			SevenWonders.getLogger().log(Level.INFO, "On supprime "+gold+" panels de ressource PIECE au joueur "+p.getName());
+		}
 		int goldRemoved = 0;
-		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getPlace()]){
+		for (RessourcePanel rp : ressourcePanels[p.getPlace()]){
 			if (goldRemoved < gold && rp.ressource.equals(Ressource.PIECE)){
-				ressourcePanels[Game.getPlayerTurn().getPlace()].remove(rp);
+				ressourcePanels[p.getPlace()].remove(rp);
 				goldRemoved++;
 			}
 			if (goldRemoved >= gold){
@@ -177,6 +182,7 @@ public class Frame extends JFrame{
 
 	private static ArrayList<CardArea> drawDrawedCards(){
 		Player player = Game.getPlayerToShow();
+		SevenWonders.getLogger().log(Level.INFO, "Dessin des "+player.getDrawedCards().size()+" cartes que le joueur "+player.getName()+" a en main");
 		cardAreas = new ArrayList<CardArea>();
 		int i = 0;
 		for (i = 0; i < player.getDrawedCards().size(); i++){
@@ -202,38 +208,38 @@ public class Frame extends JFrame{
 			int widthStart = 0;
 			switch (card.getColor()){
 			case ("blue"):
-				widthStart = 850+bleu*15;
-			heightStart = 100+bleu*15;
+				widthStart = 850;
+			heightStart = 120+bleu*15;
 			bleu++;
 			break;
 			case ("red"):
-				widthStart = 925+rouge*15;
-			heightStart = 100+rouge*15;
+				widthStart = 925;
+			heightStart = 120+rouge*15;
 			rouge++;
 			break;
 			case ("brown"):
-				heightStart = 100+marron*15;
-			widthStart = 700+marron*15;
+				heightStart = 120+marron*15;
+			widthStart = 700;
 			marron++;
 			break;
 			case ("grey"):
-				widthStart = 775+gris*15;
-			heightStart = 100+gris*15;
+				widthStart = 775;
+			heightStart = 120+gris*15;
 			gris++;
 			break;
 			case ("green"):
-				widthStart = 1000+vert*15;
-			heightStart = 100+vert*15;
+				widthStart = 1000;
+			heightStart = 120+vert*15;
 			vert++;
 			break;
 			case ("yellow"):
 				widthStart = 1075;
-			heightStart = 100+jaune*15;
+			heightStart = 120+jaune*15;
 			jaune++;
 			break;
 			case ("purple"):
-				widthStart = 1150+violet*15;
-			heightStart = 100+violet*15;
+				widthStart = 1150;
+			heightStart = 120+violet*15;
 			violet++;
 			break;
 			default:
@@ -304,11 +310,11 @@ public class Frame extends JFrame{
 		}
 		return stepPanel;
 	}
-	
+
 	static void dessinerRessources(ArrayList<RessourcePanel> ressources, ArrayList<RessourcePanel> purchasedRessources){
 		Container c = frame.getContentPane();
 		int i = 0;
-		ArrayList<RessourcePanel> r = ressources;
+		ArrayList<RessourcePanel> r = (ArrayList<RessourcePanel>)ressources.clone();
 		r.addAll(purchasedRessources);
 		for (RessourcePanel rp : r){
 			Ressource ress = rp.ressource;
@@ -413,13 +419,26 @@ public class Frame extends JFrame{
 		ressourcePanels[playerPlace] = ressourcePanel;
 	}
 
-	public static void achatRessource(RessourcePanel ressourcePanel, int gold) {
-		for (int i = 0; i < gold; i++){
-			ressourcePanels[Game.getPlayerTurn().getPlace()].remove(i);
+	public static void goldUpdate() {
+		for (int i = 0; i < Game.getNbPlayer(); i++){
+			Player p = null;
+			try {
+				p = Game.getPlayer(i);
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			int gold = p.getNbGoldEarnedThisTurn() - p.getNbGoldPayedThisTurn();
+			if (gold < 0){
+				for (int j = 0; j < gold; i++){
+					ressourcePanels[p.getPlace()].remove(i);
+				}
+			}
 		}
 	}
-	
+
 	public static void removeAllPurchase() {
+		SevenWonders.getLogger().log(Level.INFO, "Oubli de tous les achats effectués par les joueurs");
 		for (int i = 0; i < Game.getNbPlayer(); i++){
 			for (RessourcePanel rp : ressourcePanels[i]){
 				boolean[] hasBeenPurchased = new boolean[Game.getNbPlayer()];

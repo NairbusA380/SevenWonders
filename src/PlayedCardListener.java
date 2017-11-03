@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Container;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import java.util.logging.Level;
 
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -23,11 +24,13 @@ public class PlayedCardListener implements MouseListener{
 
 	@Override
 	public void mouseClicked(MouseEvent arg0) {
+		SevenWonders.getLogger().log(Level.INFO, "Clic sur une carte");
 		if (Game.getPlayerToShow().equals(Game.getPlayerTurn())){
 			if (arg0.isControlDown()){
 				Game.defausser(card);
 				this.passToNext();
 			}else if (arg0.isShiftDown()){
+				SevenWonders.getLogger().log(Level.INFO, "Tentative de validation d'étape");
 				Player player = Game.getPlayerTurn();
 				int i = 0;
 				Step wantToValidate = null;
@@ -39,25 +42,33 @@ public class PlayedCardListener implements MouseListener{
 						i++;
 					}
 				}
+				SevenWonders.getLogger().log(Level.INFO, "C'est l'étape "+(i+1)+" qu'il faut valider");
 				RessourceList cost = new RessourceList(wantToValidate.ressourceCost.ressourceList);
 				if (player.canPay(cost)){
+					SevenWonders.getLogger().log(Level.INFO, "Le joueur "+player.getName()+" peut payer le cout de validation de l'étape");
 					player.validerStep(card);
 					this.passToNext();
 				}else{
+					SevenWonders.getLogger().log(Level.INFO, "Le joueur "+player.getName()+" ne peut pas payer le cout de validation de l'étape");
 					Frame.choixUtilisateur = new JOptionPane();
 					Frame.choixUtilisateur.showMessageDialog(Frame.frame, "Vous n'avez pas les ressources pour valider l'étape "+(i+1), "Impossible de valider cette étape", JOptionPane.ERROR_MESSAGE);
 				}
 			}else if (!arg0.isControlDown() && !arg0.isShiftDown()){
+				SevenWonders.getLogger().log(Level.INFO, "Tentative de jouer la carte "+card.name+" par le joueur "+Game.getPlayerTurn().getName());
 				if (Game.getPlayerTurn().canPay(card)){
+					SevenWonders.getLogger().log(Level.INFO,"Le joueur "+Game.getPlayerTurn().getName()+" peut payer la carte "+card.name);
 					if (Game.getPlayerTurn().cardNotAlreadyPlayed(card)){
-						int gold = Game.cardChosen(card);
-						Frame.cardChosen(cardArea, gold);
+						SevenWonders.getLogger().log(Level.INFO, "Le joueur "+Game.getPlayerTurn().getName()+" n'a pas déjà joué la carte "+card.name);
+						Game.getPlayerTurn().chooseCard(card);
+						SevenWonders.getLogger().log(Level.INFO, "Le joueur "+Game.getPlayerTurn().getName()+" a pu jouer la carte "+card.name);
 						this.passToNext();
 					}else{
+						SevenWonders.getLogger().log(Level.INFO, "Le joueur "+Game.getPlayerTurn().getName()+" a déjà joué cette carte, on lui affiche une boite de dialogue l'en informant");
 						Frame.choixUtilisateur = new JOptionPane();
 						Frame.choixUtilisateur.showMessageDialog(Frame.frame, "Vous avez déjà joué cette carte, vous ne pouvez pas la rejouer", "Impossible de jouer cette carte", JOptionPane.ERROR_MESSAGE);
 					}
 				}else{
+					SevenWonders.getLogger().log(Level.INFO, "Le joueur "+Game.getPlayerTurn().getName()+" ne peut pas payer la carte, on lui affiche une boite de dialogue l'en informant");
 					Frame.choixUtilisateur = new JOptionPane();
 					Frame.choixUtilisateur.showMessageDialog(Frame.frame, "Vous n'avez pas les ressources pour payer cette carte", "Impossible de jouer cette carte", JOptionPane.ERROR_MESSAGE);
 				}
@@ -65,7 +76,8 @@ public class PlayedCardListener implements MouseListener{
 		}
 	}
 	@Override
-	public void mouseEntered(MouseEvent arg0) {
+	public void mouseEntered(MouseEvent arg0) {			
+		SevenWonders.getLogger().log(Level.INFO, "Survol de la carte "+card.name+" par le joueur "+Game.getPlayerToShow().getName());
 		this.cardArea = new CardArea(card, true, true);
 		this.cardArea.setBounds(400, 250, cardArea.getBigWidth(), cardArea.getBigHeight());
 		this.cardArea.setOpaque(false);
@@ -84,6 +96,7 @@ public class PlayedCardListener implements MouseListener{
 
 	@Override
 	public void mouseExited(MouseEvent arg0) {
+		SevenWonders.getLogger().log(Level.INFO, "Arret de survol de la carte "+card.name+" par le joueur "+Game.getPlayerToShow().getName());
 		if (!cardArea.equals(null)){
 			Container container = Frame.frame.getContentPane();
 			container.remove(cardArea);
@@ -105,7 +118,19 @@ public class PlayedCardListener implements MouseListener{
 	private void passToNext(){
 		if ((Game.getIdentifierPlayerTurn()+1)%(Game.getNbPlayer()) == 0){
 			Frame.removeAllPurchase();
+			for (int i = 0; i < Game.getNbPlayer(); i++){
+				Player p = null;
+				try {
+					p = Game.getPlayer(i);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				int gold = p.playCard(p.getCardChoosen());
+				Frame.playCard(p, gold);
+			}
 		}
+		
 		if (!Game.isLastTour()){
 			Game.nextPlayer();
 			Frame.passToNextPlayer();

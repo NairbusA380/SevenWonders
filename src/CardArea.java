@@ -2,12 +2,9 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-
 import javax.imageio.ImageIO;
-import javax.swing.Box;
 import javax.swing.JPanel;
 
 public class CardArea extends JPanel{
@@ -51,17 +48,25 @@ public class CardArea extends JPanel{
 					completeUrl += "Mini";
 				}
 				completeUrl += ".png";
+				System.out.println(completeUrl);
 				cardImage = ImageIO.read(getCardImage(completeUrl));
 			} catch (IOException e) {
 				System.err.println(this.card.toString());
 				e.printStackTrace();
 			}
 		}
+		int x, y;
+		if (!big){
+			x = Card.widthMini;
+			y = Card.heightMini;
+		}else{
+			x = Card.widthBig;
+			y = Card.heightBig;
+		}
 
-
-		drawable.drawImage(cardImage, 0, 0, this);
-
-		if (!Game.getPlayerToShow().cardNotAlreadyPlayed(card) || !Game.getPlayerToShow().canPay(card)){
+		drawable.drawImage(cardImage, 0, 0, x, y, this);
+		
+//		if (!Game.getPlayerToShow().cardNotAlreadyPlayed(card) || !Game.getPlayerToShow().canPay(card)){
 
 			if (enabled){
 				if (discard || validate){
@@ -76,7 +81,7 @@ public class CardArea extends JPanel{
 						drawable.setColor(new Color(255, 255, 255));
 						drawable.drawString("VALIDATE A STEP",this.getWidth()/2-40, this.getHeight()/2-2);
 					}
-				}else{
+				}else if (!Game.getPlayerToShow().cardNotAlreadyPlayed(card) || !Game.getPlayerToShow().canPay(card)){
 					BufferedImage croix = null;
 					String url = "croix";
 					if (!big){
@@ -92,7 +97,7 @@ public class CardArea extends JPanel{
 					drawable.drawImage(croix, 0, 0, this);
 				}
 			}
-		}
+//		}
 	}
 
 	private URL getCardImage(String nom) {

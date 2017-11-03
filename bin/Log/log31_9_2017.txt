@@ -1,0 +1,700 @@
+31 octobre 2017 17:47:43	----------- NOUVEAU LANCEMENT DU JEU -----------
+
+
+
+31 octobre 2017 17:47:43	Le joueur Joueur 1 a la merveille AlexandrieA
+				Cette merveille donne la ressource FIOLE
+				La 1e étape est : <html>Gain de 3 points</html>
+				La 1e étape est : <html><br />Production d'une unité de l'une des matières premières de votre choix par tour</html>
+				La 1e étape est : <html>Gain de 7 points</html>
+31 octobre 2017 17:47:43	Le joueur Joueur 2 a la merveille HalikarnassosB
+				Cette merveille donne la ressource TAPIS
+				La 1e étape est : <html>Gain de 2 points<br />Mise en jeu d'une carte de la défausse gratuitement</html>
+				La 1e étape est : <html>Gain de 1 point<br />Mise en jeu d'une carte de la défausse gratuitement</html>
+				La 1e étape est : <html><br />Mise en jeu d'une carte de la défausse gratuitement</html>
+31 octobre 2017 17:47:43	Le joueur Joueur 3 a la merveille HalikarnassosB
+				Cette merveille donne la ressource TAPIS
+				La 1e étape est : <html>Gain de 2 points</html>
+				La 1e étape est : <html>Gain de 1 point</html>
+31 octobre 2017 17:47:43	Le joueur Joueur 4 a la merveille HalikarnassosB
+				Cette merveille donne la ressource TAPIS
+				La 1e étape est : <html>Gain de 2 points</html>
+				La 1e étape est : <html>Gain de 1 point</html>
+31 octobre 2017 17:47:43	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 1"
+31 octobre 2017 17:47:43	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 1"
+31 octobre 2017 17:47:43	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 1"
+31 octobre 2017 17:47:43	Création du panel de ressource contenant la ressource FIOLE pour le joueur "Joueur 1"
+31 octobre 2017 17:47:43	Dessin des 7 cartes que le joueur Joueur 1 a en main
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:43	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:43	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:43	Le joueur a d'utile
+31 octobre 2017 17:47:46	Survol de la carte Presse par le joueur Joueur 1
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile
+31 octobre 2017 17:47:46	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:46	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:46	Le joueur a d'utile
+31 octobre 2017 17:47:51	Arret de survol de la carte Presse par le joueur Joueur 1
+31 octobre 2017 17:47:51	Survol de la carte Exploitation forestière par le joueur Joueur 1
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Arret de survol de la carte Exploitation forestière par le joueur Joueur 1
+31 octobre 2017 17:47:51	Survol de la carte Comptoir Est par le joueur Joueur 1
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Arret de survol de la carte Comptoir Est par le joueur Joueur 1
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:51	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:51	Le joueur a 3 pièces<br />1 fiole<br />
+31 octobre 2017 17:47:51	Le joueur a d'utile
+31 octobre 2017 17:47:52	Le joueur Joueur 1 a cliqué sur la flèche gauche. Il regarde maintenant le jeu du joueur Joueur 1
+31 octobre 2017 17:47:52	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:47:52	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:47:52	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:47:52	Création du panel de ressource contenant la ressource TAPIS pour le joueur "Joueur 4"
+31 octobre 2017 17:47:52	Le joueur Joueur 1survole la ressource TAPIS appartenant au joueur Joueur 4
+31 octobre 2017 17:47:52	La ressource survolée n'appartient pas au joueur qui joue (Joueur 1)
+31 octobre 2017 17:47:52	La ressource n'a pas déjà été achetée par le joueur Joueur 4 ce tour_ci
+31 octobre 2017 17:47:53	Le joueur Joueur 1 essaye d'acheter la ressource TAPIS au joueur Joueur 4
+31 octobre 2017 17:47:53	Cette ressource n'a pas déjà été achetée
+31 octobre 2017 17:47:53	C'est le joueur de gauche (Joueur 4) qui vend sa ressource
+31 octobre 2017 17:47:53	Le joueur peut payer la ressource
+31 octobre 2017 17:47:54	Le joueur Joueur 1 a cliqué sur la flèche droite. Il regarde maintenant le jeu du joueur Joueur 4
+31 octobre 2017 17:47:54	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 1"
+31 octobre 2017 17:47:54	Récupération du panel de ressource contenant la ressource FIOLE pour le joueur "Joueur 1"
+31 octobre 2017 17:47:54	Dessin des 7 cartes que le joueur Joueur 1 a en main
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile
+31 octobre 2017 17:47:54	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:54	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:54	Le joueur a d'utile
+31 octobre 2017 17:47:56	Survol de la carte Presse par le joueur Joueur 1
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Arret de survol de la carte Presse par le joueur Joueur 1
+31 octobre 2017 17:47:56	Survol de la carte Exploitation forestière par le joueur Joueur 1
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:47:56	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:47:56	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:47:56	Le joueur a d'utile
+31 octobre 2017 17:48:01	Clic sur une carte
+31 octobre 2017 17:48:01	Tentative de jouer la carte Exploitation forestière par le joueur Joueur 1
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 1 pièce<br />1 fiole<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile1 pièce<br />
+31 octobre 2017 17:48:01	Le joueur Joueur 1 peut payer la carte Exploitation forestière
+31 octobre 2017 17:48:01	Le joueur Joueur 1 n'a pas déjà joué la carte Exploitation forestière
+31 octobre 2017 17:48:01	Le joueur Joueur 1 a pu jouer la carte Exploitation forestière
+31 octobre 2017 17:48:01	On passe au joueur suivant
+31 octobre 2017 17:48:01	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 2"
+31 octobre 2017 17:48:01	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 2"
+31 octobre 2017 17:48:01	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 2"
+31 octobre 2017 17:48:01	Création du panel de ressource contenant la ressource TAPIS pour le joueur "Joueur 2"
+31 octobre 2017 17:48:01	Dessin des 7 cartes que le joueur Joueur 2 a en main
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Survol de la carte Caserne par le joueur Joueur 2
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Arret de survol de la carte Caserne par le joueur Joueur 2
+31 octobre 2017 17:48:01	Survol de la carte Caserne par le joueur Joueur 2
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Arret de survol de la carte Caserne par le joueur Joueur 2
+31 octobre 2017 17:48:01	Survol de la carte Autel par le joueur Joueur 2
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:01	Le joueur peut-il payer le cout 1 papyrus<br /> ?
+31 octobre 2017 17:48:01	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:01	Le joueur a d'utile
+31 octobre 2017 17:48:02	Clic sur une carte
+31 octobre 2017 17:48:02	Tentative de jouer la carte Autel par le joueur Joueur 2
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur Joueur 2 peut payer la carte Autel
+31 octobre 2017 17:48:02	Le joueur Joueur 2 n'a pas déjà joué la carte Autel
+31 octobre 2017 17:48:02	Le joueur Joueur 2 a pu jouer la carte Autel
+31 octobre 2017 17:48:02	On passe au joueur suivant
+31 octobre 2017 17:48:02	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 3"
+31 octobre 2017 17:48:02	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 3"
+31 octobre 2017 17:48:02	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 3"
+31 octobre 2017 17:48:02	Création du panel de ressource contenant la ressource TAPIS pour le joueur "Joueur 3"
+31 octobre 2017 17:48:02	Dessin des 7 cartes que le joueur Joueur 3 a en main
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Survol de la carte Comptoir Est par le joueur Joueur 3
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Arret de survol de la carte Comptoir Est par le joueur Joueur 3
+31 octobre 2017 17:48:02	Survol de la carte Presse par le joueur Joueur 3
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Arret de survol de la carte Presse par le joueur Joueur 3
+31 octobre 2017 17:48:02	Survol de la carte Marche par le joueur Joueur 3
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout 1 minerai<br /> ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:02	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:02	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:02	Le joueur a d'utile
+31 octobre 2017 17:48:03	Clic sur une carte
+31 octobre 2017 17:48:03	Tentative de jouer la carte Marche par le joueur Joueur 3
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur Joueur 3 peut payer la carte Marche
+31 octobre 2017 17:48:03	Le joueur Joueur 3 n'a pas déjà joué la carte Marche
+31 octobre 2017 17:48:03	Le joueur Joueur 3 a pu jouer la carte Marche
+31 octobre 2017 17:48:03	On passe au joueur suivant
+31 octobre 2017 17:48:03	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:03	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:03	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:03	Récupération du panel de ressource contenant la ressource TAPIS pour le joueur "Joueur 4"
+31 octobre 2017 17:48:03	Dessin des 7 cartes que le joueur Joueur 4 a en main
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Survol de la carte Autel par le joueur Joueur 4
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Arret de survol de la carte Autel par le joueur Joueur 4
+31 octobre 2017 17:48:03	Survol de la carte Presse par le joueur Joueur 4
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout 1 pièce<br /> ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile3 pièces<br />
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:03	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:03	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:03	Le joueur a d'utile
+31 octobre 2017 17:48:04	Clic sur une carte
+31 octobre 2017 17:48:04	Tentative de jouer la carte Presse par le joueur Joueur 4
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 3 pièces<br />1 tapis<br />
+31 octobre 2017 17:48:04	Le joueur a d'utile
+31 octobre 2017 17:48:04	Le joueur Joueur 4 peut payer la carte Presse
+31 octobre 2017 17:48:04	Le joueur Joueur 4 n'a pas déjà joué la carte Presse
+31 octobre 2017 17:48:04	Le joueur Joueur 4 a pu jouer la carte Presse
+31 octobre 2017 17:48:04	Oubli de tous les achats effectués par les joueurs
+31 octobre 2017 17:48:04	On supprime 1 panels de ressource PIECE au joueur Joueur 1
+31 octobre 2017 17:48:04	On passe au joueur suivant
+31 octobre 2017 17:48:04	Un nouveau tour est entamé
+31 octobre 2017 17:48:04	Récupération du panel de ressource contenant la ressource FIOLE pour le joueur "Joueur 1"
+31 octobre 2017 17:48:04	Récupération du panel de ressource contenant la ressource PIERRE_BOIS pour le joueur "Joueur 1"
+31 octobre 2017 17:48:04	Dessin des 6 cartes que le joueur Joueur 1 a en main
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Survol de la carte Autel par le joueur Joueur 1
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Arret de survol de la carte Autel par le joueur Joueur 1
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:04	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:04	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:07	Le joueur Joueur 1 a cliqué sur la flèche gauche. Il regarde maintenant le jeu du joueur Joueur 1
+31 octobre 2017 17:48:07	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:07	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:07	Récupération du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:07	Récupération du panel de ressource contenant la ressource TAPIS pour le joueur "Joueur 4"
+31 octobre 2017 17:48:07	Création du panel de ressource contenant la ressource PAPYRUS pour le joueur "Joueur 4"
+31 octobre 2017 17:48:07	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:07	Création du panel de ressource contenant la ressource PIECE pour le joueur "Joueur 4"
+31 octobre 2017 17:48:09	Le joueur Joueur 1 a cliqué sur la flèche droite. Il regarde maintenant le jeu du joueur Joueur 4
+31 octobre 2017 17:48:09	Récupération du panel de ressource contenant la ressource FIOLE pour le joueur "Joueur 1"
+31 octobre 2017 17:48:09	Récupération du panel de ressource contenant la ressource PIERRE_BOIS pour le joueur "Joueur 1"
+31 octobre 2017 17:48:09	Dessin des 6 cartes que le joueur Joueur 1 a en main
+31 octobre 2017 17:48:09	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:09	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:09	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:09	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:09	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur a d'utilePIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur peut-il payer le cout  ?
+31 octobre 2017 17:48:09	Le joueur a 1 fiole<br />PIERRE_BOIS
+
+31 octobre 2017 17:48:09	Le joueur a d'utilePIERRE_BOIS
+

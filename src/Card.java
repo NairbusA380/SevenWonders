@@ -1,4 +1,4 @@
-public class Card {
+public abstract class Card {
 
 	String name;
 	RessourceList cost;
@@ -6,48 +6,46 @@ public class Card {
 	final String color;
 	int point; // Pour les cartes bleues
 	Capacity capacity; // Pour les cartes jaunes
-	Ressource giveRessources; // Pour les cartes marrons
+	RessourceList giveRessources; // Pour les cartes marrons
 	Scientifique item; // Pour les cartes vertes (rouage, compas, tablette)
 	short warPoint; // Pour les cartes rouges
 	String image;
 	boolean haveBeenPlayed;
+	static final int widthMini = 65, heightMini = 100;
+	static final int widthBig = 194, heightBig = 300;
+	int minPlayers;
 
-	public Card(String name, Ressource[] cost, String free, int points, String image, String color){ // Bleu
-		this(name, cost, free, color, points, (Capacity)null, (Ressource)null, (Scientifique)null, (short)0, image);
-	}
-	public Card(String name, Ressource[] cost, Ressource giveRessources, String image, String color){ // Marron
-		this(name, cost, "", color, 0, (Capacity)null, giveRessources, (Scientifique)null, (short)0, image);
-	}
-	public Card(String name, Ressource[] cost, String free, short warPoint, String image, String color) { // Rouge
-		this(name, cost, free, color, 0, (Capacity)null, (Ressource)null, (Scientifique)null, warPoint, image);
-	}
-
-	public Card(String name, Ressource[] cost, String free, Scientifique item, String image, String color) { // Vert
-		this(name, cost, free, color, 0, (Capacity)null, (Ressource)null, item, (short)0, image);
-	}
-
-	public Card(String name, Ressource[] cost, String free, Capacity capacity, String image, String color) {
-		this(name, cost, free, color, 0, capacity, (Ressource)null, (Scientifique)null, (short)0, image);
-	}
-
-	public Card(String name, Ressource[] cout, String free, String color, int points, Capacity capacity, Ressource giveRessources, Scientifique item, short warPoints, String image){
+	public Card(int minPlayers, String name, Ressource[] cout, String free, String color, int points, Capacity capacity, Ressource[] giveRessources, Scientifique item, short warPoints, String image){
+		this.minPlayers = minPlayers;
 		this.name = name;
-		cost = new RessourceList();
-		for (Ressource r : cout){
-			cost.add(r);
+		if (cout != null){
+			cost = new RessourceList();
+			for (Ressource r : cout){
+				cost.add(r);
+			}
+		}else{
+			cost = null;
 		}
 		this.free = free;
 		this.color = color;
 		this.point = points;
 		this.capacity = capacity;
-		this.giveRessources = giveRessources;
+		if (giveRessources != null){
+			this.giveRessources = new RessourceList();
+			for (Ressource r : giveRessources){
+				this.giveRessources.add(r);
+			}
+		}else{
+			this.giveRessources = null;
+		}
 		this.item = item;
 		this.warPoint = warPoints;
 		this.image = image;
 		this.haveBeenPlayed = false;
 	}
 
-	public Card(String name, RessourceList cout, String free, String color, int points, Capacity capacity, Ressource giveRessources, Scientifique item, short warPoints, String image){
+	public Card(int minPlayers, String name, RessourceList cout, String free, String color, int points, Capacity capacity, RessourceList giveRessources, Scientifique item, short warPoints, String image){
+		this.minPlayers = minPlayers;
 		this.name = name;
 		this.cost = cout;
 		this.free = free;
@@ -98,10 +96,10 @@ public class Card {
 	public void setCapacity(Capacity capacity) {
 		this.capacity = capacity;
 	}
-	public Ressource getGiveRessources() {
+	public RessourceList getGiveRessources() {
 		return giveRessources;
 	}
-	public void setGiveRessources(Ressource giveRessources) {
+	public void setGiveRessources(RessourceList giveRessources) {
 		this.giveRessources = giveRessources;
 	}
 	public Scientifique getItem() {
@@ -133,10 +131,6 @@ public class Card {
 	}
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public Card cloneCard(){
-		return new Card(this.name, this.cost, this.free, this.color, this.point, this.capacity, this.giveRessources, this.item, this.warPoint, this.image);
 	}
 
 	public String toString(){

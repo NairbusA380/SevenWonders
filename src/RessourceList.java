@@ -1,12 +1,9 @@
-import java.util.AbstractList;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
 
-public class RessourceList implements Iterable{
+public class RessourceList implements Iterable<Ressource>{
 
 	ArrayList<Ressource> ressourceList;
 
@@ -23,8 +20,10 @@ public class RessourceList implements Iterable{
 		RessourceList available = this.clone();
 		for (int i = 0; i < this.ressourceList.size(); i++){
 			Ressource ressAvailable = ressourceList.get(i);
-			if (!r.contains(ressAvailable)){
-				available.remove(ressAvailable);
+			if (ressAvailable.isRessourceSimple()){
+				if (!r.contains(ressAvailable)){
+					available.remove(ressAvailable);
+				}
 			}
 		}
 		return available;
@@ -32,7 +31,7 @@ public class RessourceList implements Iterable{
 
 	public boolean add(Ressource ressource){
 		return ressourceList.add(ressource);
-		
+
 	}
 
 	public boolean addAll(RessourceList c){
