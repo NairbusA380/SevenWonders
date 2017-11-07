@@ -1,119 +1,82 @@
-7 novembre 2017 11:54:39	----------- NOUVEAU LANCEMENT DU JEU -----------
+7 novembre 2017 14:53:11	----------- NOUVEAU LANCEMENT DU JEU -----------
 
 
 
-7 novembre 2017 11:54:39	Le joueur Joueur 1 a la merveille AlexandrieA
+7 novembre 2017 14:53:11	Le joueur Joueur 1 a la merveille AlexandrieA
 				Cette merveille donne la ressource FIOLE
 				La 1e étape est : <html>Gain de 3 points</html>
 				La 1e étape est : <html><br />Production d'une unité de l'une des matières premières de votre choix par tour</html>
 				La 1e étape est : <html>Gain de 7 points</html>
-7 novembre 2017 11:54:39	Le joueur Joueur 2 a la merveille HalikarnassosB
+7 novembre 2017 14:53:11	Le joueur Joueur 2 a la merveille HalikarnassosB
 				Cette merveille donne la ressource TAPIS
 				La 1e étape est : <html>Gain de 2 points<br />Mise en jeu d'une carte de la défausse gratuitement</html>
 				La 1e étape est : <html>Gain de 1 point<br />Mise en jeu d'une carte de la défausse gratuitement</html>
 				La 1e étape est : <html><br />Mise en jeu d'une carte de la défausse gratuitement</html>
-7 novembre 2017 11:54:39	Le joueur Joueur 3 a la merveille HalikarnassosB
+7 novembre 2017 14:53:11	Le joueur Joueur 3 a la merveille HalikarnassosB
 				Cette merveille donne la ressource TAPIS
 				La 1e étape est : <html>Gain de 2 points</html>
 				La 1e étape est : <html>Gain de 1 point</html>
-7 novembre 2017 11:54:39	Le joueur Joueur 4 a la merveille AlexandrieB
+7 novembre 2017 14:53:11	Le joueur Joueur 4 a la merveille AlexandrieB
 				Cette merveille donne la ressource FIOLE
 				La 1e étape est : <html><br />Production d'une unité de l'une des matières premières de votre choix par tour</html>
 				La 1e étape est : <html><br />La description de cette capacité n'est pas encore disponible</html>
 				La 1e étape est : <html>Gain de 7 points</html>
-7 novembre 2017 11:54:39	Dessin des 5 cartes que le joueur Joueur 1 a en main
-7 novembre 2017 11:54:41	Survol de la carte Cavite par le joueur Joueur 1
-7 novembre 2017 11:54:41	Arret de survol de la carte Cavite par le joueur Joueur 1
-7 novembre 2017 11:54:41	Survol de la carte Bains par le joueur Joueur 1
-7 novembre 2017 11:54:41	Arret de survol de la carte Bains par le joueur Joueur 1
-7 novembre 2017 11:54:41	Survol de la carte Exploitation forestière par le joueur Joueur 1
-7 novembre 2017 11:54:41	Arret de survol de la carte Exploitation forestière par le joueur Joueur 1
-7 novembre 2017 11:54:41	Survol de la carte Atelier par le joueur Joueur 1
-7 novembre 2017 11:54:41	Arret de survol de la carte Atelier par le joueur Joueur 1
-7 novembre 2017 11:54:41	Survol de la carte Métier à tisser par le joueur Joueur 1
-7 novembre 2017 11:54:42	Clic sur une carte
-7 novembre 2017 11:54:42	Tentative de jouer la carte Métier à tisser par le joueur Joueur 1
-7 novembre 2017 11:54:42	Le joueur Joueur 1 peut payer la carte Métier à tisser
-7 novembre 2017 11:54:42	Le joueur Joueur 1 n'a pas déjà joué la carte Métier à tisser
-7 novembre 2017 11:54:42	Le joueur Joueur 1 a pu jouer la carte Métier à tisser
-7 novembre 2017 11:54:42	On passe au joueur suivant
-7 novembre 2017 11:54:42	----------------------On change les ressources achetées du joueur Joueur 2 : 
-7 novembre 2017 11:54:42	Ce joueur a les ressources : 3 pièces<br />1 tapis<br />
-7 novembre 2017 11:54:42	Dessin des 5 cartes que le joueur Joueur 2 a en main
-7 novembre 2017 11:54:42	Survol de la carte Marche par le joueur Joueur 2
-7 novembre 2017 11:54:42	Arret de survol de la carte Marche par le joueur Joueur 2
-7 novembre 2017 11:54:42	Survol de la carte Caserne par le joueur Joueur 2
-7 novembre 2017 11:54:42	Arret de survol de la carte Caserne par le joueur Joueur 2
-7 novembre 2017 11:54:42	Survol de la carte Chantier par le joueur Joueur 2
-7 novembre 2017 11:54:42	Arret de survol de la carte Chantier par le joueur Joueur 2
-7 novembre 2017 11:54:42	Survol de la carte Scriptorium par le joueur Joueur 2
-7 novembre 2017 11:54:42	Arret de survol de la carte Scriptorium par le joueur Joueur 2
-7 novembre 2017 11:54:42	Survol de la carte Presse par le joueur Joueur 2
-7 novembre 2017 11:54:43	Clic sur une carte
-7 novembre 2017 11:54:43	Tentative de jouer la carte Presse par le joueur Joueur 2
-7 novembre 2017 11:54:43	Le joueur Joueur 2 peut payer la carte Presse
-7 novembre 2017 11:54:43	Le joueur Joueur 2 n'a pas déjà joué la carte Presse
-7 novembre 2017 11:54:43	Le joueur Joueur 2 a pu jouer la carte Presse
-7 novembre 2017 11:54:43	On passe au joueur suivant
-7 novembre 2017 11:54:43	----------------------On change les ressources achetées du joueur Joueur 3 : 
-7 novembre 2017 11:54:43	Ce joueur a les ressources : 3 pièces<br />1 tapis<br />
-7 novembre 2017 11:54:43	Dessin des 4 cartes que le joueur Joueur 3 a en main
-7 novembre 2017 11:54:43	Survol de la carte Théâtre par le joueur Joueur 3
-7 novembre 2017 11:54:44	Arret de survol de la carte Théâtre par le joueur Joueur 3
-7 novembre 2017 11:54:44	Survol de la carte Tour de garde par le joueur Joueur 3
-7 novembre 2017 11:54:44	Arret de survol de la carte Tour de garde par le joueur Joueur 3
-7 novembre 2017 11:54:44	Survol de la carte Verrerie par le joueur Joueur 3
-7 novembre 2017 11:54:51	Arret de survol de la carte Verrerie par le joueur Joueur 3
-7 novembre 2017 11:54:51	Survol de la carte Tour de garde par le joueur Joueur 3
-7 novembre 2017 11:54:51	Arret de survol de la carte Tour de garde par le joueur Joueur 3
-7 novembre 2017 11:54:51	Survol de la carte Théâtre par le joueur Joueur 3
-7 novembre 2017 11:54:52	Arret de survol de la carte Théâtre par le joueur Joueur 3
-7 novembre 2017 11:54:52	Survol de la carte Tour de garde par le joueur Joueur 3
-7 novembre 2017 11:54:52	Arret de survol de la carte Tour de garde par le joueur Joueur 3
-7 novembre 2017 11:54:52	Survol de la carte Verrerie par le joueur Joueur 3
-7 novembre 2017 11:54:53	Arret de survol de la carte Verrerie par le joueur Joueur 3
-7 novembre 2017 11:54:53	Survol de la carte Comptoir Ouest par le joueur Joueur 3
-7 novembre 2017 11:54:53	Clic sur une carte
-7 novembre 2017 11:54:53	Tentative de jouer la carte Comptoir Ouest par le joueur Joueur 3
-7 novembre 2017 11:54:53	Le joueur Joueur 3 peut payer la carte Comptoir Ouest
-7 novembre 2017 11:54:53	Le joueur Joueur 3 n'a pas déjà joué la carte Comptoir Ouest
-7 novembre 2017 11:54:53	Le joueur Joueur 3 a pu jouer la carte Comptoir Ouest
-7 novembre 2017 11:54:53	On passe au joueur suivant
-7 novembre 2017 11:54:53	----------------------On change les ressources achetées du joueur Joueur 4 : 
-7 novembre 2017 11:54:53	Ce joueur a les ressources : 3 pièces<br />1 fiole<br />
-7 novembre 2017 11:54:53	Dessin des 4 cartes que le joueur Joueur 4 a en main
-7 novembre 2017 11:54:53	Survol de la carte Autel par le joueur Joueur 4
-7 novembre 2017 11:54:53	Arret de survol de la carte Autel par le joueur Joueur 4
-7 novembre 2017 11:54:53	Survol de la carte Filon par le joueur Joueur 4
-7 novembre 2017 11:54:54	Arret de survol de la carte Filon par le joueur Joueur 4
-7 novembre 2017 11:54:54	Survol de la carte Comptoir Est par le joueur Joueur 4
-7 novembre 2017 11:54:54	Arret de survol de la carte Comptoir Est par le joueur Joueur 4
-7 novembre 2017 11:54:54	Survol de la carte Filon par le joueur Joueur 4
-7 novembre 2017 11:54:59	Clic sur une carte
-7 novembre 2017 11:54:59	Tentative de jouer la carte Filon par le joueur Joueur 4
-7 novembre 2017 11:54:59	Le joueur Joueur 4 peut payer la carte Filon
-7 novembre 2017 11:54:59	Le joueur Joueur 4 n'a pas déjà joué la carte Filon
-7 novembre 2017 11:54:59	Le joueur Joueur 4 a pu jouer la carte Filon
-7 novembre 2017 11:54:59	----------------------On change les ressources du joueur Joueur 1 : 3 pièces<br />1 fiole<br />
-7 novembre 2017 11:54:59	----------------------On change les ressources du joueur Joueur 1 : 3 pièces<br />1 fiole<br />1 tapis<br />
-7 novembre 2017 11:54:59	----------------------On change les ressources du joueur Joueur 2 : 3 pièces<br />1 tapis<br />
-7 novembre 2017 11:54:59	----------------------On change les ressources du joueur Joueur 2 : 3 pièces<br />1 tapis<br />1 papyrus<br />
-7 novembre 2017 11:54:59	----------------------On change les ressources du joueur Joueur 3 : 3 pièces<br />1 tapis<br />
-7 novembre 2017 11:54:59	----------------------On change les ressources du joueur Joueur 4 : 3 pièces<br />1 minerai<br />1 fiole<br />
-7 novembre 2017 11:54:59	Oubli de tous les achats effectués par les joueurs
-7 novembre 2017 11:54:59	On passe au joueur suivant
-7 novembre 2017 11:54:59	Un nouveau tour est entamé
-7 novembre 2017 11:54:59	Fin du tour
-7 novembre 2017 11:54:59	Le joueur Joueur 1 n'a ni gagné ni perdu d'or
-7 novembre 2017 11:54:59	Le joueur Joueur 2 n'a ni gagné ni perdu d'or
-7 novembre 2017 11:54:59	Le joueur Joueur 3 n'a ni gagné ni perdu d'or
-7 novembre 2017 11:54:59	Le joueur Joueur 4 n'a ni gagné ni perdu d'or
-7 novembre 2017 11:54:59	----------------------On change les ressources achetées du joueur Joueur 1 : 
-7 novembre 2017 11:54:59	Ce joueur a les ressources : 3 pièces<br />1 fiole<br />1 tapis<br />
-7 novembre 2017 11:54:59	Dessin des 3 cartes que le joueur Joueur 1 a en main
-7 novembre 2017 11:55:00	Survol de la carte Autel par le joueur Joueur 1
-7 novembre 2017 11:55:00	Arret de survol de la carte Autel par le joueur Joueur 1
-7 novembre 2017 11:55:00	Survol de la carte Comptoir Est par le joueur Joueur 1
-7 novembre 2017 11:55:00	Arret de survol de la carte Comptoir Est par le joueur Joueur 1
-7 novembre 2017 11:55:00	Survol de la carte Scriptorium par le joueur Joueur 1
-7 novembre 2017 11:55:00	Arret de survol de la carte Scriptorium par le joueur Joueur 1
+7 novembre 2017 14:53:12	Dessin des 5 cartes que le joueur Joueur 1 a en main
+7 novembre 2017 14:53:16	Survol de la carte Verrerie par le joueur Joueur 1
+7 novembre 2017 14:53:18	Clic sur une carte
+7 novembre 2017 14:53:18	Tentative de jouer la carte Verrerie par le joueur Joueur 1
+7 novembre 2017 14:53:18	Le joueur Joueur 1 peut payer la carte Verrerie
+7 novembre 2017 14:53:18	Le joueur Joueur 1 n'a pas déjà joué la carte Verrerie
+7 novembre 2017 14:53:18	Le joueur Joueur 1 a pu jouer la carte Verrerie
+7 novembre 2017 14:53:18	On passe au joueur suivant
+7 novembre 2017 14:53:18	----------------------On change les ressources achetées du joueur Joueur 2 : 
+7 novembre 2017 14:53:18	Ce joueur a les ressources : 3 pièces<br />1 tapis<br />
+7 novembre 2017 14:53:18	Dessin des 5 cartes que le joueur Joueur 2 a en main
+7 novembre 2017 14:53:18	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:18	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:18	Survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:18	Arret de survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:18	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:19	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:19	Survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:20	Arret de survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:20	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:21	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:21	Survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:21	Arret de survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:21	Survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:21	Arret de survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:21	Survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:21	Arret de survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:22	Survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:22	Arret de survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:22	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:22	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:22	Survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:22	Arret de survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:22	Survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:22	Arret de survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:22	Survol de la carte Marche par le joueur Joueur 2
+7 novembre 2017 14:53:24	Arret de survol de la carte Marche par le joueur Joueur 2
+7 novembre 2017 14:53:24	Survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:24	Arret de survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:24	Survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:24	Arret de survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:24	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:24	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:24	Survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:25	Arret de survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:25	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:26	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:26	Survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:28	Arret de survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:29	Survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:29	Arret de survol de la carte Comptoir Ouest par le joueur Joueur 2
+7 novembre 2017 14:53:29	Survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:29	Arret de survol de la carte Comptoir Est par le joueur Joueur 2
+7 novembre 2017 14:53:29	Survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:29	Arret de survol de la carte Filon par le joueur Joueur 2
+7 novembre 2017 14:53:29	Survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:29	Arret de survol de la carte Caserne par le joueur Joueur 2
+7 novembre 2017 14:53:29	Survol de la carte Marche par le joueur Joueur 2
+7 novembre 2017 14:53:30	Arret de survol de la carte Marche par le joueur Joueur 2

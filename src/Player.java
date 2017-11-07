@@ -387,6 +387,126 @@ public class Player {
 
 	public void chooseCard(Card c){
 		this.cardChoosen = c;
+		int costGold = 0;
+		if (c.getCost() != null) {
+			for (Ressource ressource : c.getCost()) {
+				if (ressource.equals(Ressource.PIECE)) {
+					costGold++;
+				}
+			}
+			this.nbGoldPayedThisTurn += costGold;
+		}
+		if (c.getCapacity() != null) {
+			switch (c.getCapacity()) {
+				case RAPPORTE_1_PIECE_MARRON_JOUEUR_ET_VOISINS:
+					this.nbGoldEarnedThisTurn += this.countBrownCardYouAndNeighbours();
+					break;
+				case RAPPORTE_2_PIECES_GRIS_JOUEUR_ET_VOISINS:
+					this.nbGoldEarnedThisTurn += 2*this.countBrownCardYouAndNeighbours();
+					break;
+				case RAPPORTE_1_PIECE_1_VICTOIRE_MARRON:
+					this.nbGoldEarnedThisTurn += this.countYourBrownCard();
+					break;
+				case RAPPORTE_1_PIECE_1_VICTOIRE_JAUNE:
+					this.nbGoldEarnedThisTurn += this.countYourYellowCard();
+					break;
+				case RAPPORTE_2_PIECE_2_VICTOIRE_GRIS:
+					this.nbGoldEarnedThisTurn += 2*this.countYourGreyCard();
+					break;
+				case RAPPORTE_3_PIECE_1_VICTOIRE_ETAPE:
+					this.nbGoldEarnedThisTurn += 3*this.countStepsValidated();
+					break;
+			}
+		}
+	}
+	
+	private int countStepsValidated() {
+		int nbSteps = 0;
+		for (Step step : this.getWonder().getStep()) {
+			if (step.isValidated()) {
+				nbSteps++;
+			}else {
+				break;
+			}
+		}
+		return nbSteps;
+	}
+	
+	private int countYourBrownCard() {
+		int nbBrownCards = 0;
+		
+		for (Card card : this.getPlayedCards()) {
+			if (card.getColor() == "brown") {
+				nbBrownCards++;
+			}
+		}
+		return nbBrownCards;
+	}
+	
+	private int countYourYellowCard() {
+		int nbYellowCards = 0;
+		
+		for (Card card : this.getPlayedCards()) {
+			if (card.getColor() == "yellow") {
+				nbYellowCards++;
+			}
+		}
+		return nbYellowCards;
+	}
+	
+	private int countYourGreyCard() {
+		int nbGreyCards = 0;
+		
+		for (Card card : this.getPlayedCards()) {
+			if (card.getColor() == "grey") {
+				nbGreyCards++;
+			}
+		}
+		return nbGreyCards;
+	}
+	
+	private int countBrownCardYouAndNeighbours() {
+		Player left = this.getLeftPlayer();
+		Player right = this.getRightPlayer();
+		int nbBrownCards = 0;
+		for (Card card : left.getPlayedCards()) {
+			if (card.getColor() == "brown") {
+				nbBrownCards++;
+			}
+		}
+		for (Card card : right.getPlayedCards()) {
+			if (card.getColor() == "brown") {
+				nbBrownCards++;
+			}
+		}
+		for (Card card : this.getPlayedCards()) {
+			if (card.getColor() == "brown") {
+				nbBrownCards++;
+			}
+		}
+		return nbBrownCards;
+	}
+	
+	private int countGreyCardYouAndNeighbours() {
+		Player left = this.getLeftPlayer();
+		Player right = this.getRightPlayer();
+		int nbGreyCards = 0;
+		for (Card card : left.getPlayedCards()) {
+			if (card.getColor() == "grey") {
+				nbGreyCards++;
+			}
+		}
+		for (Card card : right.getPlayedCards()) {
+			if (card.getColor() == "grey") {
+				nbGreyCards++;
+			}
+		}
+		for (Card card : this.getPlayedCards()) {
+			if (card.getColor() == "grey") {
+				nbGreyCards++;
+			}
+		}
+		return nbGreyCards;
 	}
 
 	public RessourceList getRessources() {
@@ -396,7 +516,7 @@ public class Player {
 	public void setRessources(RessourceList ressources) {
 		this.ressources = ressources;
 		SevenWonders.getLogger().log(Level.INFO, "----------------------On change les ressources du joueur "+this.getName()+" : "+ressources.toString());
-		
+
 	}
 
 	public String getName() {
@@ -423,7 +543,7 @@ public class Player {
 	public void setPurchasedRessources(RessourceList purchasedRessources) {
 		this.purchasedRessources = purchasedRessources;
 		SevenWonders.getLogger().log(Level.INFO, "----------------------On change les ressources achetées du joueur "+this.getName()+" : "+purchasedRessources.toString());
-		
+
 	}
 
 
