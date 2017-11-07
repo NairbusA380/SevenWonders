@@ -32,7 +32,6 @@ public enum Ressource {
 	}
 	
 	public boolean isRessourceSimple(){
-		System.out.println(this.toString()+" = "+(this.toString().split("_").length == 1));
 		return this.toString().split("_").length == 1;
 	}
 	

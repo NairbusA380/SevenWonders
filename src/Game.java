@@ -34,37 +34,43 @@ public class Game {
 
 	private static void createFirstAgeCards() {
 		ArrayList<Card> cardsCreated = new ArrayList<Card>();
-		BlueCard autel = new BlueCard(3, "Autel", null, "Temple", 2, "autel");
-		BlueCard theatre = new BlueCard(3, "Théâtre", null, "Statue", 2, "theatre");
-		BrownCard exploitationForestiere = new BrownCard(3, "Exploitation forestière", new Ressource[]{Ressource.PIECE}, new Ressource[]{Ressource.PIERRE_BOIS}, "exploitation_forestière");
-		BrownCard cavite = new BrownCard(3, "Cavite", null, new Ressource[]{Ressource.PIERRE}, "cavite");
-		BrownCard filon = new BrownCard(3, "Filon", null, new Ressource[]{Ressource.MINERAI}, "filon");
-		BrownCard chantier = new BrownCard(4, "Chantier", null, new Ressource[]{Ressource.BOIS}, "chantier");
-		RedCard caserne = new RedCard(3, "Caserne", new Ressource[]{Ressource.MINERAI}, "", (short)1, "caserne");
-		RedCard tourDeGarde = new RedCard(4, "Tour de garde", new Ressource[]{Ressource.ARGILE}, "", (short)1, "tour_de_garde");
-		YellowCard comptoirEst = new YellowCard(3, "Comptoir Est", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_DROITE, "comptoir_est");
-		YellowCard comptoirOuest = new YellowCard(3, "Comptoir Ouest", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_GAUCHE, "comptoir_ouest");
-		YellowCard marche = new YellowCard(3, "Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche");
-		GreyCard presse = new GreyCard(3, "Presse", new Ressource[0], new Ressource[]{Ressource.PAPYRUS}, "presse");
-		GreyCard metierATisser = new GreyCard(3, "Métier à tisser", new Ressource[0], new Ressource[]{Ressource.TAPIS}, "metier_a_tisser");
-		GreenCard scriptorium = new GreenCard(3, "Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "Tribunal_Bibliothèque", Scientifique.TABLETTE, "scriptorium");
-		GreenCard atelier = new GreenCard(3, "Atelier", new Ressource[]{Ressource.FIOLE}, "Laboratoire_Champs de tir", Scientifique.ROUE, "atelier");
+		BlueCard autel3 = new BlueCard(3, "Autel", null, "Temple", 2, "autel");
+		BlueCard autel5 = new BlueCard(5, "Autel", null, "Temple", 2, "autel");
+		BlueCard theatre3 = new BlueCard(3, "Théâtre", null, "Statue", 2, "theatre");
+		BrownCard exploitationForestiere3 = new BrownCard(3, "Exploitation forestière", new Ressource[]{Ressource.PIECE}, new Ressource[]{Ressource.PIERRE_BOIS}, "exploitation_forestière");
+		BrownCard cavite3 = new BrownCard(3, "Cavite", null, new Ressource[]{Ressource.PIERRE}, "cavite");
+		BrownCard cavite5 = new BrownCard(5, "Cavite", null, new Ressource[]{Ressource.PIERRE}, "cavite");
+		BrownCard filon3 = new BrownCard(3, "Filon", null, new Ressource[]{Ressource.MINERAI}, "filon");
+		BrownCard chantier4 = new BrownCard(4, "Chantier", null, new Ressource[]{Ressource.BOIS}, "chantier");
+		RedCard caserne3 = new RedCard(3, "Caserne", new Ressource[]{Ressource.MINERAI}, "", (short)1, "caserne");
+		RedCard tourDeGarde4 = new RedCard(4, "Tour de garde", new Ressource[]{Ressource.ARGILE}, "", (short)1, "tour_de_garde");
+		YellowCard comptoirEst3 = new YellowCard(3, "Comptoir Est", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_DROITE, "comptoir_est");
+		YellowCard comptoirOuest3 = new YellowCard(3, "Comptoir Ouest", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_GAUCHE, "comptoir_ouest");
+		YellowCard marche3 = new YellowCard(3, "Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche");
+		GreyCard presse3 = new GreyCard(3, "Presse", new Ressource[0], new Ressource[]{Ressource.PAPYRUS}, "presse");
+		GreyCard metierATisser3 = new GreyCard(3, "Métier à tisser", new Ressource[0], new Ressource[]{Ressource.TAPIS}, "metier_a_tisser");
+		GreenCard scriptorium3 = new GreenCard(3, "Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "Tribunal_Bibliothèque", Scientifique.TABLETTE, "scriptorium");
+		GreenCard scriptorium4 = new GreenCard(4, "Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "Tribunal_Bibliothèque", Scientifique.TABLETTE, "scriptorium");
+		GreenCard atelier3 = new GreenCard(3, "Atelier", new Ressource[]{Ressource.FIOLE}, "Laboratoire_Champs de tir", Scientifique.ROUE, "atelier");
 
-		cardsCreated.add(autel);
-		cardsCreated.add(exploitationForestiere);
-		cardsCreated.add(caserne);
-		cardsCreated.add(comptoirEst);
-		cardsCreated.add(presse);
-		cardsCreated.add(scriptorium);
-		cardsCreated.add(marche);
-		cardsCreated.add(metierATisser);
-		cardsCreated.add(atelier);
-		cardsCreated.add(theatre);
-		cardsCreated.add(cavite);
-		cardsCreated.add(tourDeGarde);
-		cardsCreated.add(filon);
-		cardsCreated.add(comptoirOuest);
-		cardsCreated.add(chantier);
+		cardsCreated.add(autel3);
+		cardsCreated.add(exploitationForestiere3);
+		cardsCreated.add(caserne3);
+		cardsCreated.add(comptoirEst3);
+		cardsCreated.add(presse3);
+		cardsCreated.add(scriptorium3);
+		cardsCreated.add(marche3);
+		cardsCreated.add(metierATisser3);
+		cardsCreated.add(atelier3);
+		cardsCreated.add(theatre3);
+		cardsCreated.add(cavite3);
+		cardsCreated.add(tourDeGarde4);
+		cardsCreated.add(filon3);
+		cardsCreated.add(comptoirOuest3);
+		cardsCreated.add(chantier4);
+		cardsCreated.add(scriptorium4);
+		cardsCreated.add(cavite5);
+		cardsCreated.add(autel5);
 
 
 		//Melange des cartes
@@ -280,8 +286,10 @@ public class Game {
 				p.setWonder(Wonder.ALEXANDRIEA);
 			}else if (i == 1){
 				p.setWonder(Wonder.HALIKARNASSOSB);
-			}else{
+			}else if (i == 2){
 				p.setWonder(Wonder.HALIKARNASSOSA);
+			}else{
+				p.setWonder(Wonder.ALEXANDRIEB);
 			}
 			p.getRessources().add(p.getWonder().getRessource());
 			RessourceList ress = new RessourceList();
@@ -329,7 +337,7 @@ public class Game {
 				steps[2] = step3;
 
 				p.getWonder().setStep(steps);
-			}else{
+			}else if (i==2){
 				ress.add(Ressource.MINERAI);
 				ress.add(Ressource.MINERAI);
 				step1 = new Step(1, ress, 2, null, "Halikarnassos/FaceB/Step1.png");
@@ -343,6 +351,27 @@ public class Game {
 
 				steps[0] = step1;
 				steps[1] = step2;
+
+				p.getWonder().setStep(steps);
+			}else{
+				ress.add(Ressource.ARGILE);
+				ress.add(Ressource.ARGILE);
+				step1 = new Step(1, ress, 0, Capacity.CHOISIR_1_MATIERE_PREMIERE, null, "Alexandrie/FaceB/Step1.png");
+				ress = new RessourceList();
+				ress.add(Ressource.BOIS);
+				ress.add(Ressource.BOIS);
+				step2 = new Step(2, ress, 0, Capacity.CHOISIR_1_PRODUIT_MANUFACTURE, step1, "Alexandrie/FaceB/Step2.png");
+				ress = new RessourceList();
+				ress.add(Ressource.PIERRE);
+				ress.add(Ressource.PIERRE);
+				ress.add(Ressource.PIERRE);
+				step3 = new Step(3, ress, 7, (Capacity)null, step2, "Alexandrie/FaceB/Step3.png");
+
+				Step[] steps = new Step[3];
+
+				steps[0] = step1;
+				steps[1] = step2;
+				steps[2] = step3;
 
 				p.getWonder().setStep(steps);
 			}
@@ -399,9 +428,12 @@ public class Game {
 		}
 		playerToShow = playerTurn;
 		playerTurn.setPurchasedRessources(new RessourceList());
+		SevenWonders.getLogger().log(Level.INFO, "Ce joueur a les ressources : "+playerTurn.getRessources().toString());
+		
 	}
 
 	public static void nextTurn(int age){
+		SevenWonders.getLogger().log(Level.INFO, "Fin du tour");
 		if (age == 1 || age == 3){
 			ArrayList<Card> playerDrawedCards = players[0].getDrawedCards();
 			for (int i = players.length-1; i> 0; i--){
@@ -417,12 +449,21 @@ public class Game {
 		}
 		for (Player p : players){
 			int goldEarned = p.getNbGoldEarnedThisTurn();
+			p.setNbGoldEarnedThisTurn(0);
+			if (goldEarned > 0) {
+				SevenWonders.getLogger().log(Level.INFO, "Le joueur "+p.getName()+" a gagné "+goldEarned+" or ce tour-ci");
+			}else if (goldEarned < 0) {
+				SevenWonders.getLogger().log(Level.INFO, "Le joueur "+p.getName()+" a perdu "+goldEarned+" or ce tour-ci");
+			}else{
+				SevenWonders.getLogger().log(Level.INFO, "Le joueur "+p.getName()+" n'a ni gagné ni perdu d'or");
+			}
 			if (goldEarned > 0){
-				for (int i = 0; i < goldEarned; i++){
-					RessourceList ressources = p.getRessources();
+				SevenWonders.getLogger().log(Level.INFO, "On ajoute "+goldEarned+" pièces au joueur "+p.getName());
+				RessourceList ressources = p.getRessources();
+				for (int i = 0; i < goldEarned; i++){	
 					ressources.add(Ressource.PIECE);
-					p.setRessources(ressources);
 				}
+				p.setRessources(ressources);
 			}
 		}
 	}
@@ -430,7 +471,9 @@ public class Game {
 	public static void nextAge(){
 		for (Player p : players){
 			ArrayList<Card> drawedCardLastAge = p.getDrawedCards();
-			defausse.addAll(drawedCardLastAge);
+			for (Card c : drawedCardLastAge) {
+				defausse.add(c);
+			}
 			p.setDrawedCards(new ArrayList<Card>());
 		}
 		if (getCurrentAge() == 1){
@@ -492,12 +535,12 @@ public class Game {
 		return result;
 	}
 
-	public static Player getPlayer(int i) throws Exception {
-		if (i < getNbPlayer()){
+	public static Player getPlayer(int i) /*throws Exception*/ {
+		//if (i < getNbPlayer()){
 			return players[i];
-		}else{
-			throw new Exception();
-		}
+		//}else{
+		//	throw new Exception();
+		//}
 	}
 
 	public static Player getPlayerTurn() {

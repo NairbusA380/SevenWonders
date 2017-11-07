@@ -290,12 +290,12 @@ public class Player {
 	}
 
 	public boolean canPay(RessourceList cout){
-		SevenWonders.getLogger().log(Level.INFO, "Le joueur peut-il payer le cout "+cout.toString()+" ?");
+		//SevenWonders.getLogger().log(Level.INFO, "Le joueur peut-il payer le cout "+cout.toString()+" ?");
 		RessourceList availableRessources = this.getRessources().clone();
 		availableRessources.addAll(this.getPurchasedRessources());
-		SevenWonders.getLogger().log(Level.INFO, "Le joueur a "+availableRessources.toString());
+		//SevenWonders.getLogger().log(Level.INFO, "Le joueur a "+availableRessources.toString());
 		RessourceList availableRessourcesWithoutUnused = availableRessources.supressAllUnusedRessources(cout);
-		SevenWonders.getLogger().log(Level.INFO, "Le joueur a d'utile"+availableRessourcesWithoutUnused.toString());
+		//SevenWonders.getLogger().log(Level.INFO, "Le joueur a d'utile"+availableRessourcesWithoutUnused.toString());
 		return availableRessourcesWithoutUnused.containsAll(cout);
 	}
 
@@ -395,6 +395,8 @@ public class Player {
 
 	public void setRessources(RessourceList ressources) {
 		this.ressources = ressources;
+		SevenWonders.getLogger().log(Level.INFO, "----------------------On change les ressources du joueur "+this.getName()+" : "+ressources.toString());
+		
 	}
 
 	public String getName() {
@@ -420,6 +422,8 @@ public class Player {
 
 	public void setPurchasedRessources(RessourceList purchasedRessources) {
 		this.purchasedRessources = purchasedRessources;
+		SevenWonders.getLogger().log(Level.INFO, "----------------------On change les ressources achetées du joueur "+this.getName()+" : "+purchasedRessources.toString());
+		
 	}
 
 

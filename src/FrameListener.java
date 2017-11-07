@@ -40,19 +40,15 @@ public class FrameListener extends ComponentAdapter {
 			cont.remove(s);
 			switch (s.nbSteps){
 			case 2:
-				System.out.println(2);
 				s.setBounds((int)((241+390*i)*Frame.pourcentageX), (int)(y*Frame.pourcentageY), 256, 115);
 				break;
 			case 3:
-				System.out.println(3);
 				s.setBounds((int)((142+348*i)*Frame.pourcentageX), (int)(y*Frame.pourcentageY), 256, 115);
 				break;
 			case 4:
-				System.out.println(4);
 				s.setBounds((int)((42+298*i)*Frame.pourcentageX), (int)(y*Frame.pourcentageY), 256, 115);
 				break;
 			}
-			System.out.println(s.getBounds().toString());
 			cont.add(s);
 			i++;
 		}

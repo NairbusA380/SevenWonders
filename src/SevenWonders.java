@@ -20,17 +20,15 @@ public class SevenWonders {
 		int nbPlayers = 4;
 		Calendar c = Calendar.getInstance();
 		String filename = "log"+c.get(Calendar.DAY_OF_MONTH)+"_"+c.get(Calendar.MONTH)+"_"+c.get(Calendar.YEAR);
+		File fichier = new File("src/Log/"+filename+".txt");
 		try{
-			java.io.File fichier = new java.io.File("C:/Users/lenai.DESKTOP-EPMFFRF/workspace/Seven Wonders/src/Log/"+filename+".txt");
 			fichier.createNewFile();
 		}catch (IOException e){
-			System.out.println(e);
-			System.out.println(filename);
 		}
 		
 		logger = Logger.getLogger("logger");
 		try {
-			handler = new FileHandler("C:/Users/lenai.DESKTOP-EPMFFRF/workspace/Seven Wonders/src/Log/"+filename+".txt");
+			handler = new FileHandler("src/Log/"+filename+".txt");
 			handler.setFormatter(new MyFormatter());
 			logger.addHandler(handler);
 		} catch (SecurityException | IOException e) {
@@ -40,7 +38,7 @@ public class SevenWonders {
 		logger.log(Level.INFO, "----------- NOUVEAU LANCEMENT DU JEU -----------\n\n\n");
 		game = new Game(nbPlayers);
 		frame = new Frame();
-		frame.entireDraw();
+		Frame.entireDraw();
 	}
 
 	public Frame getFrame() {

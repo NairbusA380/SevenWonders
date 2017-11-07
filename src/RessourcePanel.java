@@ -9,15 +9,13 @@ import javax.swing.JPanel;
 
 public class RessourcePanel extends JPanel{
 
-	Wonder wonder;
 	BufferedImage ressourceImage;
 	String url;
-	Ressource ressource;
+	private Ressource ressource;
 	boolean[] hasBeenPurchased = new boolean[Game.getNbPlayer()];
 
 
-	public RessourcePanel(Wonder wonder, Ressource ressource){
-		this.wonder = wonder;
+	public RessourcePanel(Ressource ressource){
 		this.url = null;
 		this.ressource = ressource;
 		for (int i = 0; i < hasBeenPurchased.length; i++){
@@ -25,8 +23,7 @@ public class RessourcePanel extends JPanel{
 		}
 	}
 
-	public RessourcePanel(Wonder wonder, String url, Ressource ressource){
-		this.wonder = wonder;
+	public RessourcePanel(String url, Ressource ressource){
 		this.url = url;
 		this.ressource = ressource;
 	}
@@ -44,14 +41,6 @@ public class RessourcePanel extends JPanel{
 			System.err.println(url);
 		}
 		drawable.drawImage(ressourceImage, 0, 0, null);
-	}
-
-	public Wonder getWonder() {
-		return wonder;
-	}
-
-	public void setWonder(Wonder wonder) {
-		this.wonder = wonder;
 	}
 
 	public String getUrl() {
@@ -85,6 +74,14 @@ public class RessourcePanel extends JPanel{
 
 	public boolean hasBeenPurchased(int playerPlace) {
 		return hasBeenPurchased[playerPlace];
+	}
+	
+	public Ressource getRessource() {
+		return ressource;
+	}
+
+	public void setRessource(Ressource ressource) {
+		this.ressource = ressource;
 	}
 
 }

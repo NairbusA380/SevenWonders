@@ -44,11 +44,11 @@ public class CardArea extends JPanel{
 		if (cardImage == null){
 			try {
 				String completeUrl = url;
+				completeUrl += card.minPlayers;
 				if (!big){
 					completeUrl += "Mini";
 				}
 				completeUrl += ".png";
-				System.out.println(completeUrl);
 				cardImage = ImageIO.read(getCardImage(completeUrl));
 			} catch (IOException e) {
 				System.err.println(this.card.toString());

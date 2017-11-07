@@ -117,18 +117,7 @@ public class PlayedCardListener implements MouseListener{
 
 	private void passToNext(){
 		if ((Game.getIdentifierPlayerTurn()+1)%(Game.getNbPlayer()) == 0){
-			Frame.removeAllPurchase();
-			for (int i = 0; i < Game.getNbPlayer(); i++){
-				Player p = null;
-				try {
-					p = Game.getPlayer(i);
-				} catch (Exception e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-				int gold = p.playCard(p.getCardChoosen());
-				Frame.playCard(p, gold);
-			}
+			Frame.nextTurn();
 		}
 		
 		if (!Game.isLastTour()){

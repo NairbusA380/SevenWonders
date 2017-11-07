@@ -1,0 +1,24 @@
+7 novembre 2017 09:49:49	----------- NOUVEAU LANCEMENT DU JEU -----------
+
+
+
+7 novembre 2017 09:49:49	Le joueur Joueur 1 a la merveille AlexandrieA
+				Cette merveille donne la ressource FIOLE
+				La 1e étape est : <html>Gain de 3 points</html>
+				La 1e étape est : <html><br />Production d'une unité de l'une des matières premières de votre choix par tour</html>
+				La 1e étape est : <html>Gain de 7 points</html>
+7 novembre 2017 09:49:49	Le joueur Joueur 2 a la merveille HalikarnassosB
+				Cette merveille donne la ressource TAPIS
+				La 1e étape est : <html>Gain de 2 points<br />Mise en jeu d'une carte de la défausse gratuitement</html>
+				La 1e étape est : <html>Gain de 1 point<br />Mise en jeu d'une carte de la défausse gratuitement</html>
+				La 1e étape est : <html><br />Mise en jeu d'une carte de la défausse gratuitement</html>
+7 novembre 2017 09:49:49	Le joueur Joueur 3 a la merveille HalikarnassosB
+				Cette merveille donne la ressource TAPIS
+				La 1e étape est : <html>Gain de 2 points</html>
+				La 1e étape est : <html>Gain de 1 point</html>
+7 novembre 2017 09:49:49	Le joueur Joueur 4 a la merveille AlexandrieB
+				Cette merveille donne la ressource FIOLE
+				La 1e étape est : <html><br />Production d'une unité de l'une des matières premières de votre choix par tour</html>
+				La 1e étape est : <html><br />La description de cette capacité n'est pas encore disponible</html>
+				La 1e étape est : <html>Gain de 7 points</html>
+7 novembre 2017 09:49:50	Dessin des 4 cartes que le joueur Joueur 1 a en main

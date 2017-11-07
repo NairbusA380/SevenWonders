@@ -1,5 +1,6 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GraphicsDevice;
@@ -51,19 +52,15 @@ public class Frame extends JFrame{
 		frame.setDefaultCloseOperation(Frame.EXIT_ON_CLOSE);
 		for (int i = 0; i < Game.getNbPlayer(); i++){
 			ressourcePanels[i] = new ArrayList<RessourcePanel>();
+			for (Ressource r : Game.getPlayer(i).getRessources()) {
+				ressourcePanels[i].add(new RessourcePanel(r));
+			}
 		}
 	}
 
 	//public void draw(){
 	public static void entireDraw(){
-		//		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getLeftPlayer().getPlace()]){
-		//			System.out.println("Je peux acheter la ressource "+rp.ressource+" à gauche ? "+!rp.hasBeenPurchased[Game.getPlayerTurn().getPlace()]);
-		//		}
-		//		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getRightPlayer().getPlace()]){
-		//			System.out.println("Je peux acheter la ressource "+rp.ressource+" à droite ? "+!rp.hasBeenPurchased[Game.getPlayerTurn().getPlace()]);
-		//		}
-
-
+				
 		if (keyListener == null){
 			keyListener = new KeyListener();
 			frame.addKeyListener(keyListener);
@@ -79,29 +76,13 @@ public class Frame extends JFrame{
 		container.setLayout(null);
 
 		// Dessin des ressources disponibles
-		ArrayList<RessourcePanel> panelsRessources = ressourcePanels[playerToShow.getPlace()];
-		for (int i = 0; i < playerToShow.getRessources().size(); i++){
-			Ressource ressource = (Ressource)playerToShow.getRessources().get(i);
-			RessourcePanel ressourcePanel = null;
-			if (panelsRessources.size() > i){
-				ressourcePanel = panelsRessources.get(i);
-				SevenWonders.getLogger().log(Level.INFO, "Récupération du panel de ressource contenant la ressource "+ressource.toString()+" pour le joueur \""+playerToShow.getName()+"\"");
-			}else{
-				ressourcePanel = new RessourcePanel(activeWonder, ressource);
-				ressourcePanels[playerToShow.getPlace()].add(ressourcePanel);
-				SevenWonders.getLogger().log(Level.INFO, "Création du panel de ressource contenant la ressource "+ressource.toString()+" pour le joueur \""+playerToShow.getName()+"\"");
-			}
 
-			if ((playerToShow.equals(Game.getPlayerTurn().getLeftPlayer()) || (playerToShow.equals(Game.getPlayerTurn().getRightPlayer()))) && !ressource.equals(Ressource.PIECE)){
-				ressourcePanel.addMouseListener(new RessourceListener(ressourcePanel));
-			}
-		}
 		ArrayList<RessourcePanel> purchasedPanels = new ArrayList<RessourcePanel>();
 		if (playerToShow.equals(Game.getPlayerTurn())){
 			int i = playerToShow.getRessources().size();
 			for (Object o : playerToShow.getPurchasedRessources()){
 				Ressource ressource = (Ressource)o;
-				RessourcePanel ressourcePanel = new RessourcePanel(activeWonder, ressource);
+				RessourcePanel ressourcePanel = new RessourcePanel(ressource);
 				ressourcePanel.addMouseListener(new RessourceListener(ressourcePanel));
 				purchasedPanels.add(ressourcePanel);
 				i++;
@@ -144,7 +125,7 @@ public class Frame extends JFrame{
 
 		//Dessin des cartes déjà jouées
 
-		for (CardArea cardArea : playedCardAreas ){
+		for (CardArea cardArea : playedCardAreas){
 			container.add(cardArea);
 		}
 
@@ -160,25 +141,26 @@ public class Frame extends JFrame{
 		container.add(right);
 
 		frame.setContentPane(container);
+		
 		frame.pack();
 		frame.repaint();
 	}
 
-	public static void playCard(Player p, int gold){
-		if (gold > 0){
-			SevenWonders.getLogger().log(Level.INFO, "On supprime "+gold+" panels de ressource PIECE au joueur "+p.getName());
-		}
-		int goldRemoved = 0;
-		for (RessourcePanel rp : ressourcePanels[p.getPlace()]){
-			if (goldRemoved < gold && rp.ressource.equals(Ressource.PIECE)){
-				ressourcePanels[p.getPlace()].remove(rp);
-				goldRemoved++;
-			}
-			if (goldRemoved >= gold){
-				break;
-			}
-		}
-	}
+//	public static void playCard(Player p, int gold){
+//		if (gold > 0){
+//			SevenWonders.getLogger().log(Level.INFO, "On supprime "+gold+" panels de ressource PIECE au joueur "+p.getName());
+//		}
+//		int goldRemoved = 0;
+//		for (RessourcePanel rp : ressourcePanels[p.getPlace()]){
+//			if (goldRemoved < gold && rp.getRessource().equals(Ressource.PIECE)){
+//				ressourcePanels[p.getPlace()].remove(rp);
+//				goldRemoved++;
+//			}
+//			if (goldRemoved >= gold){
+//				break;
+//			}
+//		}
+//	}
 
 	private static ArrayList<CardArea> drawDrawedCards(){
 		Player player = Game.getPlayerToShow();
@@ -312,12 +294,12 @@ public class Frame extends JFrame{
 	}
 
 	static void dessinerRessources(ArrayList<RessourcePanel> ressources, ArrayList<RessourcePanel> purchasedRessources){
-		Container c = frame.getContentPane();
+		Player playerToShow = Game.getPlayerToShow();
 		int i = 0;
 		ArrayList<RessourcePanel> r = (ArrayList<RessourcePanel>)ressources.clone();
 		r.addAll(purchasedRessources);
 		for (RessourcePanel rp : r){
-			Ressource ress = rp.ressource;
+			Ressource ress = rp.getRessource();
 			if (ress.equals(Ressource.PIECE)){
 				rp.setBounds(15+60*i, 10, 56, 55);
 				rp.setOpaque(false);
@@ -326,30 +308,39 @@ public class Frame extends JFrame{
 			}
 		}
 		for (RessourcePanel rp : r){
-			Ressource ress = rp.ressource;
+			Ressource ress = rp.getRessource();
 			if (ress.isProduitManufacture()){
 				rp.setBounds(15+60*i, 10, 56, 55);
 				rp.setOpaque(false);
+				if (playerToShow.equals(Game.getPlayerTurn().getLeftPlayer()) || playerToShow.equals(Game.getPlayerTurn().getRightPlayer())){
+					if (rp.getMouseListeners().length == 0) {
+						rp.addMouseListener(new RessourceListener(rp));
+					}
+				}
 				container.add(rp);
 				i++;
 			}
 		}
 		for (RessourcePanel rp : r){
-			Ressource ress = rp.ressource;
+			Ressource ress = rp.getRessource();
 			if (!ress.isProduitManufacture() && !ress.equals(Ressource.PIECE)){
 				rp.setBounds(15+60*i, 10, 56, 55);
 				rp.setOpaque(false);
+				if (playerToShow.equals(Game.getPlayerTurn().getLeftPlayer()) || playerToShow.equals(Game.getPlayerTurn().getRightPlayer())){
+					if (rp.getMouseListeners().length == 0) {
+						rp.addMouseListener(new RessourceListener(rp));
+					}
+				}
 				container.add(rp);
 				i++;
 			}
 		}
-		frame.setContentPane(c);
 	}
 
 	static void passToNextPlayer(){
-		/*for (RessourcePanel rp : this.ressourcePanels[Game.getPlayerTurn().getPlace()]){
+		for (RessourcePanel rp : ressourcePanels[Game.getPlayerTurn().getPlace()]){
 			rp.setHasBeenPurchased(Game.getPlayerTurn().getPlace(), false);
-		}*/
+		}
 		entireDraw();
 	}
 
@@ -398,8 +389,8 @@ public class Frame extends JFrame{
 		ressourcePanels[playerPosition].remove(place);
 	}
 
-	public static void addToRessourcePanel(Ressource ressource, Wonder wonder, int place, int playerPosition){
-		RessourcePanel ressourcePanel = new RessourcePanel(wonder, ressource);
+	public static void addToRessourcePanel(Ressource ressource, int place, int playerPosition){
+		RessourcePanel ressourcePanel = new RessourcePanel(ressource);
 		ressourcePanels[playerPosition].add(place, ressourcePanel);
 	}
 
@@ -437,6 +428,36 @@ public class Frame extends JFrame{
 		}
 	}
 
+	public static void nextTurn(){
+		// Tous les joueurs jouent leur carte
+
+		for (int i = 0; i < Game.getNbPlayer(); i++){
+			Player p = Game.getPlayer(i);
+			int gold = p.playCard(p.getCardChoosen());
+			//Frame.playCard(p, gold);
+		}
+
+		removeAllPurchase();
+
+		//Attribution des pièces gagnées ou suppression des pièces perdues
+		for (int i = 0; i < Game.getNbPlayer(); i++) {
+			Player p = Game.getPlayer(i);
+			int gold = p.getNbGoldEarnedThisTurn()-p.getNbGoldPayedThisTurn();
+			if (gold > 0) {
+				for (int j = 0; j < gold; j++){
+					ressourcePanels[i].add(new RessourcePanel(Ressource.PIECE));
+				}
+			}else{
+				for (int j = 0; j < -gold; j++){
+					System.out.println("tentative de suppression");
+					System.out.println(ressourcePanels[i].size());
+					ressourcePanels[i] = suppressionPanel(p, Ressource.PIECE);
+					System.out.println(ressourcePanels[i].size());
+				}
+			}
+		}
+	}
+
 	public static void removeAllPurchase() {
 		SevenWonders.getLogger().log(Level.INFO, "Oubli de tous les achats effectués par les joueurs");
 		for (int i = 0; i < Game.getNbPlayer(); i++){
@@ -446,6 +467,31 @@ public class Frame extends JFrame{
 					hasBeenPurchased[j] = false;
 				}
 				rp.setHasBeenPurchased(hasBeenPurchased);
+			}
+		}
+	}
+
+	public static ArrayList<RessourcePanel> suppressionPanel(Player p, Ressource ressource) {
+		boolean suppress = false;
+		ArrayList<RessourcePanel> arpVide = new ArrayList<RessourcePanel>();
+		ArrayList<RessourcePanel> arp = ressourcePanels[p.getPlace()];
+		for (RessourcePanel rp : arp) {
+			if (!rp.getRessource().equals(ressource) || suppress){
+				arpVide.add(rp);
+			}else {
+				if (!suppress && rp.getRessource().equals(ressource)) {
+					suppress = true;
+				}
+			}
+		}
+		return arpVide;
+	}
+
+	public static void setPurchased(RessourcePanel rp, int playerPlace, boolean purchased) {
+		for (int i = 0; i < ressourcePanels[playerPlace].size(); i++) {
+			if (ressourcePanels[playerPlace].get(i).equals(rp)) {
+				ressourcePanels[playerPlace].get(i).setHasBeenPurchased(playerPlace, purchased);
+				break;
 			}
 		}
 	}
