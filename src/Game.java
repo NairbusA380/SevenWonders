@@ -33,15 +33,19 @@ public class Game {
 	}
 
 	private static void createFirstAgeCards() {
+		
 		ArrayList<Card> cardsCreated = new ArrayList<Card>();
+		
 		BlueCard autel3 = new BlueCard(3, "Autel", null, "Temple", 2, "autel");
-		BlueCard autel5 = new BlueCard(5, "Autel", null, "Temple", 2, "autel");
 		BlueCard theatre3 = new BlueCard(3, "Théâtre", null, "Statue", 2, "theatre");
+		BlueCard bains3 = new BlueCard(3, "Bains", new Ressource[] {Ressource.PIERRE}, "Aqueduc", 3, "bains");
+		BlueCard autel5 = new BlueCard(5, "Autel", null, "Temple", 2, "autel");
+		BlueCard preteurSurGages7 = new BlueCard(7," Prêteur sur gages", null, null, 3, "preteur_sur_gages");
 		BrownCard exploitationForestiere3 = new BrownCard(3, "Exploitation forestière", new Ressource[]{Ressource.PIECE}, new Ressource[]{Ressource.PIERRE_BOIS}, "exploitation_forestière");
 		BrownCard cavite3 = new BrownCard(3, "Cavite", null, new Ressource[]{Ressource.PIERRE}, "cavite");
-		BrownCard cavite5 = new BrownCard(5, "Cavite", null, new Ressource[]{Ressource.PIERRE}, "cavite");
 		BrownCard filon3 = new BrownCard(3, "Filon", null, new Ressource[]{Ressource.MINERAI}, "filon");
 		BrownCard chantier4 = new BrownCard(4, "Chantier", null, new Ressource[]{Ressource.BOIS}, "chantier");
+		BrownCard cavite5 = new BrownCard(5, "Cavite", null, new Ressource[]{Ressource.PIERRE}, "cavite");
 		RedCard caserne3 = new RedCard(3, "Caserne", new Ressource[]{Ressource.MINERAI}, "", (short)1, "caserne");
 		RedCard tourDeGarde4 = new RedCard(4, "Tour de garde", new Ressource[]{Ressource.ARGILE}, "", (short)1, "tour_de_garde");
 		YellowCard comptoirEst3 = new YellowCard(3, "Comptoir Est", new Ressource[0], "Forum", Capacity.ECHANGE_MATIERE_PREMIERE_DROITE, "comptoir_est");
@@ -49,10 +53,11 @@ public class Game {
 		YellowCard marche3 = new YellowCard(3, "Marche", new Ressource[0], "", Capacity.ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, "marche");
 		GreyCard presse3 = new GreyCard(3, "Presse", new Ressource[0], new Ressource[]{Ressource.PAPYRUS}, "presse");
 		GreyCard metierATisser3 = new GreyCard(3, "Métier à tisser", new Ressource[0], new Ressource[]{Ressource.TAPIS}, "metier_a_tisser");
+		GreyCard verrerie3 = new GreyCard(3, "Verrerie", new Ressource[0], new Ressource[]{Ressource.FIOLE}, "verrerie");
 		GreenCard scriptorium3 = new GreenCard(3, "Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "Tribunal_Bibliothèque", Scientifique.TABLETTE, "scriptorium");
-		GreenCard scriptorium4 = new GreenCard(4, "Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "Tribunal_Bibliothèque", Scientifique.TABLETTE, "scriptorium");
 		GreenCard atelier3 = new GreenCard(3, "Atelier", new Ressource[]{Ressource.FIOLE}, "Laboratoire_Champs de tir", Scientifique.ROUE, "atelier");
-
+		GreenCard scriptorium4 = new GreenCard(4, "Scriptorium", new Ressource[]{Ressource.PAPYRUS}, "Tribunal_Bibliothèque", Scientifique.TABLETTE, "scriptorium");
+		
 		cardsCreated.add(autel3);
 		cardsCreated.add(exploitationForestiere3);
 		cardsCreated.add(caserne3);
@@ -64,14 +69,19 @@ public class Game {
 		cardsCreated.add(atelier3);
 		cardsCreated.add(theatre3);
 		cardsCreated.add(cavite3);
-		cardsCreated.add(tourDeGarde4);
 		cardsCreated.add(filon3);
 		cardsCreated.add(comptoirOuest3);
+		cardsCreated.add(bains3);
+		cardsCreated.add(verrerie3);
+
+		cardsCreated.add(tourDeGarde4);
 		cardsCreated.add(chantier4);
 		cardsCreated.add(scriptorium4);
+		
 		cardsCreated.add(cavite5);
 		cardsCreated.add(autel5);
-
+		
+		cardsCreated.add(preteurSurGages7);
 
 		//Melange des cartes
 
