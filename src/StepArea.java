@@ -48,11 +48,7 @@ public class StepArea extends JPanel{
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
-				drawable.drawImage(croix, 0, 0, this);
-			}else{
-				/*RessourceList<Ressource> cost = new RessourceList(step.ressourceCost);
-				if (!Game.getPlayerTurn().canPay(cost)){
-				}*/
+				drawable.drawImage(croix, 0, 19, this);
 			}
 		}
 	}

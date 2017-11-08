@@ -1,3 +1,4 @@
+/Images/
 /AgePanel.class
 /AlreadyValidatedException.class
 /ArrowButton.class
@@ -8,6 +9,7 @@
 /Capacity.class
 /Card.class
 /CardArea.class
+/CardList.class
 /DrawingPanel.class
 /FinListener.class
 /FinPartiePanel.class
@@ -17,7 +19,6 @@
 /GreenCard.class
 /GreyCard.class
 /HelpAnimation.class
-/Images/
 /InterAgeListener.class
 /KeyListener.class
 /Log/
@@ -42,4 +43,3 @@
 /TooSoonToValidateException.class
 /Wonder.class
 /YellowCard.class
-/CardList.class

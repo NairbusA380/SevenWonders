@@ -49,7 +49,7 @@ public class HelpAnimation implements ActionListener {
 
 		yPanel = Math.max(yPanel-delta, Frame.frame.getHeight()-330);
 		// On détermine la position du panel d'étape
-		instructions.setBounds(0, 125, widthInstructions, heightInstructions);
+		instructions.setBounds(0, 144, widthInstructions, heightInstructions);
 
 		// On détermine la position finale et la taille du panel d'étape
 		stepPanel.setPreferredSize(new Dimension(widthPanel, heightPanel));

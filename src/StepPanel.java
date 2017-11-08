@@ -20,15 +20,15 @@ public class StepPanel extends JPanel{
 	}
 
 	public void paintComponent(Graphics g) {
-		super.paintComponent(g);
-		Graphics2D drawable = (Graphics2D)g;
-		BufferedImage image = null;
-		try {
-			image = ImageIO.read(getImage("transparent.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		drawable.drawImage(image, 0, 0, this);
+//		super.paintComponent(g);
+//		Graphics2D drawable = (Graphics2D)g;
+//		BufferedImage image = null;
+//		try {
+//			image = ImageIO.read(getImage("transparent.png"));
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		}
+//		drawable.drawImage(image, 0, 0, this);
 	}
 
 	private URL getImage(String nom) {
