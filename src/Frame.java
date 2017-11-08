@@ -242,7 +242,7 @@ public class Frame extends JFrame{
 			Step step = wonder.getStep()[i];
 			StepArea stepArea = new StepArea(step);
 			stepArea.setBackground(new Color(0, 0, 0, 0));
-			stepArea.setPreferredSize(new Dimension(256, 115));
+			stepArea.setPreferredSize(new Dimension(256, 134));
 			stepAreas.add(stepArea);
 		}
 		return stepAreas;
@@ -262,27 +262,27 @@ public class Frame extends JFrame{
 			}else{
 				step.setBackground(new Color(0, 150, 0, 0));
 			}
-			step.setPreferredSize(new Dimension(256, 115));
+			step.setPreferredSize(new Dimension(256, 134));
 
 			StepInstructionLabel l = new StepInstructionLabel(s.getStep().toString());
 			l.setForeground(Color.WHITE);
-			s.setBounds(0, 0, 256, 115);
+			s.setBounds(0, 0, 256, 134);
 			step.add(s);
-			l.setBounds(0, 125, 256, 0);
+			l.setBounds(0, 144, 256, 0);
 			Border b = l.getBorder();
 			Border marginLeft = new EmptyBorder(0, 15, 0, 0);
 			l.setBorder(new CompoundBorder(b, marginLeft));
 			step.add(l);
-			int y = frame.getHeight()-145;
+			int y = frame.getHeight()-163;
 			switch (nbSteps){
 			case 2:
-				step.setBounds(291+390*i, y, 256, 115);
+				step.setBounds(291+390*i, y, 256, 134);
 				break;
 			case 3:
-				step.setBounds(192+348*i, y, 256, 115);
+				step.setBounds(192+348*i, y, 256, 134);
 				break;
 			case 4:
-				step.setBounds(92+298*i, y, 256, 115);
+				step.setBounds(92+298*i, y, 256, 134);
 				break;
 			}
 			step.setPreferredSize(new Dimension(256, 245));
