@@ -348,19 +348,24 @@ public class Game {
 
 				p.getWonder().setStep(steps);
 			}else if (i==2){
-				ress.add(Ressource.MINERAI);
-				ress.add(Ressource.MINERAI);
-				step1 = new Step(1, ress, 2, null, "Halikarnassos/FaceB/Step1.png");
+				ress.add(Ressource.ARGILE);
+				ress.add(Ressource.ARGILE);
+				step1 = new Step(1, ress, 3, null, "Halikarnassos/FaceA/Step1.png");
 				ress = new RessourceList();
-				ress.add(Ressource.ARGILE);
-				ress.add(Ressource.ARGILE);
-				ress.add(Ressource.ARGILE);
-				step2 = new Step(2, ress, 1, step1, "Halikarnassos/FaceB/Step2.png");
+				ress.add(Ressource.MINERAI);
+				ress.add(Ressource.MINERAI);
+				ress.add(Ressource.MINERAI);
+				step2 = new Step(2, ress, 0, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step1, "Halikarnassos/FaceA/Step2.png");
+				ress = new RessourceList();
+				ress.add(Ressource.TAPIS);
+				ress.add(Ressource.TAPIS);
+				step3 = new Step(3, ress, 7, step2, "Halikarnassos/FaceA/Step3.png");
 
-				Step[] steps = new Step[2];
+				Step[] steps = new Step[3];
 
 				steps[0] = step1;
 				steps[1] = step2;
+				steps[2] = step3;
 
 				p.getWonder().setStep(steps);
 			}else{
@@ -387,9 +392,8 @@ public class Game {
 			}
 			String log = "Le joueur "+p.getName()+" a la merveille "+p.getWonder().getName()
 					+"\n\t\t\t\t"+"Cette merveille donne la ressource "+p.getWonder().getRessource().toString();
-			int j = 1;
 			for (Step s : p.getWonder().getStep()){
-				log += "\n\t\t\t\t"+"La "+j+"e étape est : "+s.toString();
+				log += "\n\t\t\t\t"+"La "+s.position+"e étape est : "+s.toString();
 			}
 
 			SevenWonders.getLogger().log(Level.INFO, log);
