@@ -30,7 +30,7 @@ public class Step {
 	public Step(int position, RessourceList ressourceCost, int nbPoints, RessourceList ressourcesGained, Step previousStep, String url){
 		this(position, ressourceCost, nbPoints, null, ressourcesGained, previousStep, url);
 	}
-
+	
 	public Step(int position, RessourceList ressourceCost, int nbPoints, Capacity capacity, Step previousStep, String url){
 		this(position, ressourceCost, nbPoints, capacity, null, previousStep, url);
 	}

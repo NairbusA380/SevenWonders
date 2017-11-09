@@ -184,6 +184,12 @@ public class Player {
 				warForce += c.getWarPoint();
 			}
 		}
+		for (Step s : getWonder().getStep()){
+			if (s.capacity.equals(Capacity.GAGNER_2_BOUCLIERS)) {
+				warForce += 2;
+			}
+		}
+		
 		return warForce;
 	}
 

@@ -58,6 +58,7 @@ public class DrawingPanel extends JPanel{
 		if (imageFond == null){
 			if (wonderImage == null){
 				try {
+					System.out.println(wonder.getURL());
 					wonderImage = ImageIO.read(getWonderImage(wonder.getURL()));
 				} catch (IOException e) {
 					System.err.println("L'image de la merveille n'existe pas");

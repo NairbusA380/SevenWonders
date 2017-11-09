@@ -5,6 +5,7 @@ public enum Capacity {
 	ECHANGE_PRODUIT_MANUFACTURE_DROITE_GAUCHE, // Codee
 	CHOISIR_1_MATIERE_PREMIERE, //Codee
 	CHOISIR_1_PRODUIT_MANUFACTURE, // Codee
+	GAGNER_2_BOUCLIERS,
 	RAPPORTE_1_PIECE_MARRON_JOUEUR_ET_VOISINS, // Codée
 	RAPPORTE_2_PIECES_GRIS_JOUEUR_ET_VOISINS, // Codée
 	RAPPORTE_1_PIECE_1_VICTOIRE_MARRON, // Codée pour les pieces
@@ -52,6 +53,9 @@ public enum Capacity {
 			break;
 		case CHOISIR_1_MATIERE_PREMIERE:
 			result = "Production d'une unité de l'une des matières premières de votre choix par tour";
+			break;
+		case GAGNER_2_BOUCLIERS:
+			result = "Gain de deux boucliers";
 			break;
 		default :
 			result = "La description de cette capacité n'est pas encore disponible";

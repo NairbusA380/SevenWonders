@@ -13,6 +13,7 @@
 /DrawingPanel.class
 /FinListener.class
 /FinPartiePanel.class
+/Log/
 /Frame.class
 /FrameListener.class
 /Game.class
@@ -21,7 +22,6 @@
 /HelpAnimation.class
 /InterAgeListener.class
 /KeyListener.class
-/Log/
 /MyFormatter.class
 /PlayedCardListener.class
 /Player.class

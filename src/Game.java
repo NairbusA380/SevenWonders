@@ -12,12 +12,15 @@ public class Game {
 	private static int identifierPlayerTurn;
 	private static int identifierStart;
 	private static int nbPlayer;
+	private static ArrayList<Wonder> wonders;
 
 	public Game(int nbPlayers){		
 		Game.nbPlayer = nbPlayers;
 		Game.players = new Player[nbPlayers];
 		createPlayers();
 		this.setPlayersPosition();
+		wonders = new ArrayList<Wonder>();
+		createWonders();
 		Game.players = this.attributeWondersToPlayers();
 		firstAgeCards = new CardList();
 		secondAgeCards = new CardList();
@@ -30,6 +33,134 @@ public class Game {
 		identifierPlayerTurn = 0;
 		identifierStart = 0;
 		currentAge = 1;
+	}
+	
+	private static void createWonders() {
+		RessourceList ress = new RessourceList();
+		Step step1, step2, step3;
+		Step[] steps;
+		
+		// HalikarnassosA
+		Wonder halikarnassosA = Wonder.HALIKARNASSOSA;
+		ress.add(Ressource.ARGILE);
+		ress.add(Ressource.ARGILE);
+		step1 = new Step(1, ress, 3, null, "Halikarnassos/FaceA/Step1.png");
+		ress = new RessourceList();
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		step2 = new Step(2, ress, 0, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step1, "Halikarnassos/FaceA/Step2.png");
+		ress = new RessourceList();
+		ress.add(Ressource.TAPIS);
+		ress.add(Ressource.TAPIS);
+		step3 = new Step(3, ress, 7, step2, "Halikarnassos/FaceA/Step3.png");
+
+		steps = new Step[3];
+		steps[0] = step1;
+		steps[1] = step2;
+		steps[2] = step3;
+		
+		halikarnassosA.setStep(steps);
+		wonders.add(halikarnassosA);
+		
+		// HalikarnassosB
+		Wonder halikarnassosB = Wonder.HALIKARNASSOSB;
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		step1 = new Step(1, ress, 2, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, null, "Halikarnassos/FaceB/Step1.png");
+		ress = new RessourceList();
+		ress.add(Ressource.ARGILE);
+		ress.add(Ressource.ARGILE);
+		ress.add(Ressource.ARGILE);
+		step2 = new Step(2, ress, 1, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step1, "Halikarnassos/FaceB/Step2.png");
+		ress = new RessourceList();
+		ress.add(Ressource.TAPIS);
+		ress.add(Ressource.PAPYRUS);
+		ress.add(Ressource.FIOLE);
+		step3 = new Step(3, ress, 0, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step2, "Halikarnassos/FaceB/Step3.png");
+
+		steps = new Step[3];
+		steps[0] = step1;
+		steps[1] = step2;
+		steps[2] = step3;
+		
+		halikarnassosB.setStep(steps);
+		wonders.add(halikarnassosB);
+		
+		// AlexandrieA
+		Wonder alexandrieA = Wonder.ALEXANDRIEA;
+		ress.add(Ressource.PIERRE);
+		ress.add(Ressource.PIERRE);
+		step1 = new Step(1, ress, 3, null, "Alexandrie/FaceA/Step1.png");
+		ress = new RessourceList();
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		step2 = new Step(1, ress, 0, Capacity.CHOISIR_1_MATIERE_PREMIERE, step1, "Alexandrie/FaceA/Step2.png");
+		ress = new RessourceList();
+		ress.add(Ressource.FIOLE);
+		ress.add(Ressource.FIOLE);
+		step3 = new Step(1, ress, 7, step2, "Alexandrie/FaceA/Step3.png");
+
+		steps = new Step[3];
+		steps[0] = step1;
+		steps[1] = step2;
+		steps[2] = step3;
+		
+		alexandrieA.setStep(steps);
+		wonders.add(alexandrieA);
+		
+		
+		// AlexandrieB
+		Wonder alexandrieB = Wonder.ALEXANDRIEB;
+		ress.add(Ressource.ARGILE);
+		ress.add(Ressource.ARGILE);
+		step1 = new Step(1, ress, 0, Capacity.CHOISIR_1_MATIERE_PREMIERE, null, "Alexandrie/FaceB/Step1.png");
+		ress = new RessourceList();
+		ress.add(Ressource.BOIS);
+		ress.add(Ressource.BOIS);
+		step2 = new Step(2, ress, 0, Capacity.CHOISIR_1_PRODUIT_MANUFACTURE, step1, "Alexandrie/FaceB/Step2.png");
+		ress = new RessourceList();
+		ress.add(Ressource.PIERRE);
+		ress.add(Ressource.PIERRE);
+		ress.add(Ressource.PIERRE);
+		step3 = new Step(3, ress, 7, (Capacity)null, step2, "Alexandrie/FaceB/Step3.png");
+
+		steps = new Step[3];
+
+		steps[0] = step1;
+		steps[1] = step2;
+		steps[2] = step3;
+		
+		alexandrieB.setStep(steps);
+		wonders.add(alexandrieB);
+		
+		// RhodosA
+		Wonder rhodosA = Wonder.RHODOSA;
+		
+		ress.add(Ressource.BOIS);
+		ress.add(Ressource.BOIS);
+		step1 = new Step(1, ress, 3, null, "Rhodos/FaceA/Step1.png");
+		ress = new RessourceList();
+		ress.add(Ressource.ARGILE);
+		ress.add(Ressource.ARGILE);
+		ress.add(Ressource.ARGILE);
+		step2 = new Step(2, ress, 0, Capacity.GAGNER_2_BOUCLIERS, step1, "Rhodos/FaceA/Step2.png");
+		ress = new RessourceList();
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		ress.add(Ressource.MINERAI);
+		step3 = new Step(3, ress, 7, (Capacity)null, step2, "Rhodos/FaceA/Step3.png");
+
+		steps = new Step[3];
+
+		steps[0] = step1;
+		steps[1] = step2;
+		steps[2] = step3;
+		
+		rhodosA.setStep(steps);
+		wonders.add(rhodosA);
+		
 	}
 
 	private static void createFirstAgeCards() {
@@ -290,114 +421,22 @@ public class Game {
 	}
 
 	private Player[] attributeWondersToPlayers() {
-		int i = 0;
+		Random r = new Random();
 		for (Player p : players){
-			if (i == 0){
-				p.setWonder(Wonder.ALEXANDRIEA);
-			}else if (i == 1){
-				p.setWonder(Wonder.HALIKARNASSOSB);
-			}else if (i == 2){
-				p.setWonder(Wonder.HALIKARNASSOSA);
-			}else{
-				p.setWonder(Wonder.ALEXANDRIEB);
-			}
+			int identifier = r.nextInt(wonders.size());
+			System.out.println(identifier);
+			Wonder w = wonders.get(identifier);
+			p.setWonder(w);
 			p.getRessources().add(p.getWonder().getRessource());
-			RessourceList ress = new RessourceList();
-			Step step1, step2, step3 = null;
-			if (i == 0){
-				ress.add(Ressource.PIERRE);
-				ress.add(Ressource.PIERRE);
-				step1 = new Step(1, ress, 3, null, "Alexandrie/FaceA/Step1.png");
-				ress = new RessourceList();
-				ress.add(Ressource.MINERAI);
-				ress.add(Ressource.MINERAI);
-				step2 = new Step(1, ress, 0, Capacity.CHOISIR_1_MATIERE_PREMIERE, step1, "Alexandrie/FaceA/Step2.png");
-				ress = new RessourceList();
-				ress.add(Ressource.FIOLE);
-				ress.add(Ressource.FIOLE);
-				step3 = new Step(1, ress, 7, step2, "Alexandrie/FaceA/Step3.png");
-
-				Step[] steps = new Step[3];
-
-				steps[0] = step1;
-				steps[1] = step2;
-				steps[2] = step3;
-
-				p.getWonder().setStep(steps);
-
-			}else if (i == 1){
-				ress.add(Ressource.MINERAI);
-				ress.add(Ressource.MINERAI);
-				step1 = new Step(1, ress, 2, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, null, "Halikarnassos/FaceB/Step1.png");
-				ress = new RessourceList();
-				ress.add(Ressource.ARGILE);
-				ress.add(Ressource.ARGILE);
-				ress.add(Ressource.ARGILE);
-				step2 = new Step(2, ress, 1, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step1, "Halikarnassos/FaceB/Step2.png");
-				ress = new RessourceList();
-				ress.add(Ressource.TAPIS);
-				ress.add(Ressource.PAPYRUS);
-				ress.add(Ressource.FIOLE);
-				step3 = new Step(3, ress, 0, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step2, "Halikarnassos/FaceB/Step3.png");
-
-				Step[] steps = new Step[3];
-
-				steps[0] = step1;
-				steps[1] = step2;
-				steps[2] = step3;
-
-				p.getWonder().setStep(steps);
-			}else if (i==2){
-				ress.add(Ressource.ARGILE);
-				ress.add(Ressource.ARGILE);
-				step1 = new Step(1, ress, 3, null, "Halikarnassos/FaceA/Step1.png");
-				ress = new RessourceList();
-				ress.add(Ressource.MINERAI);
-				ress.add(Ressource.MINERAI);
-				ress.add(Ressource.MINERAI);
-				step2 = new Step(2, ress, 0, Capacity.CONSTRUIRE_GRATUITEMENT_1_CARTE_DEFAUSSEE, step1, "Halikarnassos/FaceA/Step2.png");
-				ress = new RessourceList();
-				ress.add(Ressource.TAPIS);
-				ress.add(Ressource.TAPIS);
-				step3 = new Step(3, ress, 7, step2, "Halikarnassos/FaceA/Step3.png");
-
-				Step[] steps = new Step[3];
-
-				steps[0] = step1;
-				steps[1] = step2;
-				steps[2] = step3;
-
-				p.getWonder().setStep(steps);
-			}else{
-				ress.add(Ressource.ARGILE);
-				ress.add(Ressource.ARGILE);
-				step1 = new Step(1, ress, 0, Capacity.CHOISIR_1_MATIERE_PREMIERE, null, "Alexandrie/FaceB/Step1.png");
-				ress = new RessourceList();
-				ress.add(Ressource.BOIS);
-				ress.add(Ressource.BOIS);
-				step2 = new Step(2, ress, 0, Capacity.CHOISIR_1_PRODUIT_MANUFACTURE, step1, "Alexandrie/FaceB/Step2.png");
-				ress = new RessourceList();
-				ress.add(Ressource.PIERRE);
-				ress.add(Ressource.PIERRE);
-				ress.add(Ressource.PIERRE);
-				step3 = new Step(3, ress, 7, (Capacity)null, step2, "Alexandrie/FaceB/Step3.png");
-
-				Step[] steps = new Step[3];
-
-				steps[0] = step1;
-				steps[1] = step2;
-				steps[2] = step3;
-
-				p.getWonder().setStep(steps);
-			}
+			wonders.remove(identifier);
 			String log = "Le joueur "+p.getName()+" a la merveille "+p.getWonder().getName()
 					+"\n\t\t\t\t"+"Cette merveille donne la ressource "+p.getWonder().getRessource().toString();
+			System.out.println(p.getWonder().getName());
 			for (Step s : p.getWonder().getStep()){
 				log += "\n\t\t\t\t"+"La "+s.position+"e étape est : "+s.toString();
 			}
 
 			SevenWonders.getLogger().log(Level.INFO, log);
-			i++;
 		}
 		return players;
 	}
